@@ -23,8 +23,8 @@ const Image = ({ frontImage, backImage, reverse }) => {
           width: 284px;
           height: 260px;
           position: relative;
-          top: 125px;
-          left: 189px;
+          top: 30px;
+          left: 140px;
         }
         .front {
           width: 200px;
@@ -37,8 +37,8 @@ const Image = ({ frontImage, backImage, reverse }) => {
           width: 230px;
           height: 333px;
           position: absolute;
-          top: 0px;
-          right: 350px;
+          top: -40px;
+          right: 315px;
         }
       `}</style>
     </div>

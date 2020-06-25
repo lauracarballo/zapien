@@ -6,7 +6,7 @@ const Nav = () => (
     <nav>
       <div className="nav-logo">
         <Link href="/">
-          <a className="nav-logo">Zapien</a>
+          <a className="logo">Zapien</a>
         </Link>
       </div>
       <ul className="nav-primary">
@@ -31,13 +31,6 @@ const Nav = () => (
           display: flex;
           justify-content: space-between;
           align-items: center;
-        }
-
-        .nav-logo {
-          text-align: left;
-          color: #036100;
-          font-weight: bold;
-          font-size: 20px;
         }
 
         .nav-primary {

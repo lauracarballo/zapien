@@ -3,6 +3,22 @@ function Layout(props) {
     <div className="page-layout">
       {props.children}
       <style jsx global>{`
+        html {
+          box-sizing: border-box;
+          font-weight: 400;
+          font-size: 15px;
+        }
+
+        *,
+        *:before,
+        *:after {
+          box-sizing: inherit;
+        }
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
         body {
           margin: 0;
           padding: 0;
@@ -25,23 +41,34 @@ function Layout(props) {
           font-size: 20px;
         }
 
-        p {
-          font-weight: 400;
-          font-size: 15px;
-        }
-
         a {
-          color: black;
+          color: #333;
           text-decoration: none;
         }
 
+        a:hover:not(.logo) {
+          color: black;
+        }
+
+        ol,
+        ul {
+          list-style: none;
+          margin: 0px;
+        }
+
+        .logo {
+          text-align: left;
+          color: #036100;
+          font-weight: bold;
+          font-size: 20px;
+        }
+
         .container {
-          max-width: 1140px;
+          max-width: 1200px;
           width: 100%;
-          padding-right: 15px;
-          padding-left: 15px;
-          margin-right: auto;
-          margin-left: auto;
+          margin: 0 auto;
+          padding-right: 55px;
+          padding-left: 55px;
         }
       `}</style>
     </div>
