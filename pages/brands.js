@@ -1,42 +1,43 @@
 import Head from "../components/Head";
 import Nav from "../components/Nav";
-import MainHero from "../components/MainHero";
-import DescriptionSection from "../components/DescriptionSection";
 import MarketingSection from "../components/MarketingSection";
 import Button from "../components/Button";
+import Hero from "../components/Hero";
 import Footer from "../components/Footer";
+import DescriptionSection from "../components/DescriptionSection";
 
 export default () => (
   <>
     <Head title="Zapien" />
     <Nav />
-    <MainHero
+    <Hero
       title={
         <>
-          <div>Connecting #ethicalBrands</div>
-          <div>on our mission to save the planet</div>
+          <div>Get ready to launch your next</div>
+          <div>campaign with</div>
+          <div>Zapien</div>
         </>
       }
-      description="We connect ethical and sustainable brands with conscious creators. "
-      image="/images/collage.jpg"
+      description={
+        <>
+          <div>Change starts with us</div>
+        </>
+      }
     />
-    <DescriptionSection
-      title="OUR MISSION"
-      intro="Lorem ipsum dolor sit amet consectetur adipiscing, elit litora tristique fermentum mus, pharetra pretium pellentesque aliquam volutpat. Nec eleifend varius id consequat volutpat in lacinia suspendisse, et lectus cursus maecenas sociis duis sodales nisi"
-    />
+    <DescriptionSection intro="We will help you target conscious consumers and measure the real impact that your brand is having." />
     <MarketingSection
       backImage="/images/blogger.jpeg"
       frontImage="/images/blogger2.jpeg"
-      reverse
     >
-      <h2>In business to save the planet</h2>
+      <h2>Promote Sustainability and Ethical Lifestyle</h2>
       <p>Lorem ipsum dadum taito dac</p>
-      <Button name="I’m a Brand" />
+      <Button name="Become a Conscious Creator" />
     </MarketingSection>
 
     <MarketingSection
       backImage="/images/blogger.jpeg"
       frontImage="/images/blogger2.jpeg"
+      reverse
     >
       <h2>Promote Sustainability and Ethical Lifestyle</h2>
       <p>Lorem ipsum dadum taito dac</p>

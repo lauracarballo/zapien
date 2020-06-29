@@ -23,21 +23,20 @@ function Layout(props) {
           margin: 0;
           padding: 0;
           font-family: "Montserrat", sans-serif;
-          line-height: 1.8;
           color: #000;
         }
         h1 {
           font-weight: 700;
-          font-size: 50px;
+          font-size: 40px;
         }
 
         h2 {
           font-weight: 400;
-          font-size: 25px;
+          font-size: 20px;
         }
 
         h3 {
-          font-weight: 700;
+          font-weight: 400;
           font-size: 20px;
         }
 
@@ -60,7 +59,7 @@ function Layout(props) {
           text-align: left;
           color: #036100;
           font-weight: bold;
-          font-size: 20px;
+          font-size: 25px;
         }
 
         .container {
