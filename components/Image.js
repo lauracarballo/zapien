@@ -23,22 +23,22 @@ const Image = ({ frontImage, backImage, reverse }) => {
           width: 284px;
           height: 260px;
           position: relative;
-          top: 30px;
-          left: 140px;
+          top: 105px;
+          left: 125px;
         }
         .front {
-          width: 200px;
+          width: 240px;
           height: 300px;
           position: absolute;
           top: 46px;
           left: 310px;
         }
         .front-reverse {
-          width: 230px;
+          width: 240px;
           height: 333px;
           position: absolute;
-          top: -40px;
-          right: 315px;
+          top: 0px;
+          right: 300px;
         }
       `}</style>
     </div>

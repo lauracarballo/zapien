@@ -13,8 +13,10 @@ export default () => (
     <MainHero
       title={
         <>
-          <div>Connecting #ethicalBrands</div>
-          <div>on our mission to save the planet</div>
+          <div>Connecting</div>
+          <div>Ethical Brands with</div>
+          <div>Conscious Creators</div>
+          <div>to save the planet</div>
         </>
       }
       description="We connect ethical and sustainable brands with conscious creators. "
@@ -22,15 +24,29 @@ export default () => (
     />
     <DescriptionSection
       title="OUR MISSION"
-      intro="Lorem ipsum dolor sit amet consectetur adipiscing, elit litora tristique fermentum mus, pharetra pretium pellentesque aliquam volutpat. Nec eleifend varius id consequat volutpat in lacinia suspendisse, et lectus cursus maecenas sociis duis sodales nisi"
+      intro={
+        <>
+          <div>Reach and grow</div>
+          <div>your conscious audience</div>
+        </>
+      }
+      description={
+        <>
+          <div>Engage with an audience that cares about the planet</div>
+          <div>and help build a community of conscious consumers</div>
+        </>
+      }
     />
     <MarketingSection
-      backImage="/images/blogger.jpeg"
-      frontImage="/images/blogger2.jpeg"
+      backImage="/images/soap-handmade.jpeg"
+      frontImage="/images/organic-food.jpeg"
       reverse
     >
-      <h2>In business to save the planet</h2>
-      <p>Lorem ipsum dadum taito dac</p>
+      <h2 className="underline">In business to save the planet</h2>
+      <p>
+        Work with influencers and content creators that share the same values as
+        your brand.
+      </p>
       <Button name="I’m a Brand" />
     </MarketingSection>
 
@@ -38,8 +54,13 @@ export default () => (
       backImage="/images/blogger.jpeg"
       frontImage="/images/blogger2.jpeg"
     >
-      <h2>Promote Sustainability and Ethical Lifestyle</h2>
-      <p>Lorem ipsum dadum taito dac</p>
+      <h2 className="underline">
+        Promote Sustainability and Ethical Lifestyle
+      </h2>
+      <p>
+        Zapien is a community that incentives influencers and content creators
+        to create content that empowers positive change.
+      </p>
       <Button name="Become a Conscious Creator" />
     </MarketingSection>
     <Footer />

@@ -66,7 +66,8 @@ const Footer = () => {
       </div>
       <style jsx>{`
         footer {
-          padding: 55px 0px;
+          margin-top: 20px;
+          padding: 120px 0px;
           background-color: #f8f8f8;
           color: #333;
         }
@@ -82,7 +83,7 @@ const Footer = () => {
 
         .about-us-content {
           font-size: 12px;
-          margin: 0px;
+          margin-top: 5px;
           text-align: justify;
         }
         .footer-links {

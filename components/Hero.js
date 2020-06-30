@@ -11,15 +11,14 @@ const Hero = ({ title, description, backgroundImage }) => {
         .hero {
           display: flex;
           align-items: center;
-          background-color: none;
-          height: 65vh;
           width: 100%;
+          padding-top: 70px;
         }
 
         .hero-text {
           max-width: 100%;
           flex-direction: column;
-          text-align: left;
+          text-align: center;
           color: #000;
         }
 

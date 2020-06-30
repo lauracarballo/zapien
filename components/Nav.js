@@ -11,12 +11,12 @@ const Nav = () => (
       </div>
       <ul className="nav-primary">
         <li className="nav-link">
-          <Link href="/">
+          <Link href="/brands">
             <a>Brands</a>
           </Link>
         </li>
         <li className="nav-link">
-          <Link href="/">
+          <Link href="/creators">
             <a>Conscious Creators</a>
           </Link>
         </li>

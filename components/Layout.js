@@ -27,22 +27,21 @@ function Layout(props) {
         }
         h1 {
           font-weight: 700;
-          font-size: 40px;
+          font-size: 45px;
         }
 
         h2 {
-          font-weight: 400;
-          font-size: 20px;
-        }
-
-        h3 {
-          font-weight: 400;
-          font-size: 20px;
+          font-weight: 700;
+          font-size: 30px;
         }
 
         a {
           color: #333;
           text-decoration: none;
+        }
+
+        p {
+          margin-top: 30px;
         }
 
         a:hover:not(.logo) {
@@ -53,6 +52,21 @@ function Layout(props) {
         ul {
           list-style: none;
           margin: 0px;
+        }
+
+        .underline {
+          position: relative;
+        }
+
+        .underline:after {
+          content: "";
+          width: 100%;
+          height: 8px;
+          background: #073a00;
+          position: absolute;
+          bottom: -15px;
+          left: 0;
+          max-width: 150px;
         }
 
         .logo {

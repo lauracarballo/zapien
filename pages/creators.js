@@ -13,14 +13,13 @@ export default () => (
     <Hero
       title={
         <>
-          <div>Get ready to launch your next</div>
-          <div>campaign with</div>
-          <div>Zapien</div>
+          <div>Be creative</div>
+          <div>for the planet</div>
         </>
       }
       description={
         <>
-          <div>Change starts with us</div>
+          <div>Campaign for brands that share your values</div>
         </>
       }
     />

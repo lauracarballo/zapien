@@ -1,33 +1,35 @@
-const DescriptionSection = ({ title, intro }) => {
+const DescriptionSection = ({ title, intro, description }) => {
   return (
-    <div className="container">
-      <div className="description-section">
-        <div className="grid-col-1">
-          <h3 className="title">{title}</h3>
-        </div>
-        <div className="grid-col-2">
-          <p className="description">{intro}</p>
+    <div className="background">
+      <div className="container">
+        <div className="description-section">
+          <div className="section-title underline">{title}</div>
+          <div className="styling-intro">
+            <h2>{intro}</h2>
+          </div>
+          <div className="styling-description">
+            <p>{description}</p>
+          </div>
         </div>
       </div>
       <style jsx>{`
-        .description-section {
-          display: grid;
-          grid-template-columns: 50% 50%;
-          background-color: none;
-          margin-top: 70px;
-          padding: 70px 0px;
+        .background {
+          margin-top: 100px;
+          background-color: #eff1f9;
         }
 
-        .grid-col-2 {
-          grid: 2;
-        }
-
-        .description {
-          max-width: 100%;
-          flex-direction: column;
-          text-align: left;
-          color: black;
+        .section-title {
+          display: inline-block;
           font-size: 16px;
+        }
+
+        .description-section {
+          padding: 70px 0px;
+          text-align: center;
+        }
+
+        .styling-description > p {
+          font-size: 20px;
         }
       `}</style>
     </div>
