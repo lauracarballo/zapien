@@ -15,6 +15,8 @@ const MainHero = ({ title, description, image }) => {
           .hero-wrapper {
             position: relative;
             padding: 90px 0;
+            height: 80vh;
+            min-height: 600px;
           }
 
           .hero-text {

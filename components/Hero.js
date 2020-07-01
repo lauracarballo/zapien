@@ -1,7 +1,7 @@
 const Hero = ({ title, description, backgroundImage }) => {
   return (
-    <div className="hero">
-      <div className="container ">
+    <div className="container">
+      <div className="hero">
         <div className="hero-text">
           <h1 className="title">{title}</h1>
           <h2 className="description">{description}</h2>
@@ -11,19 +11,28 @@ const Hero = ({ title, description, backgroundImage }) => {
         .hero {
           display: flex;
           align-items: center;
+          justify-content: ${backgroundImage ? "flex-start" : "center"};
           width: 100%;
-          padding-top: 70px;
+          height: 50vh;
+          min-height: 350px;
+          margin: 25px 0;
+          ${backgroundImage &&
+          `
+          background-image: url(${backgroundImage});
+          background-repeat: no-repeat;
+          background-position: right top;
+          background-size: 50%;`}
         }
 
         .hero-text {
           max-width: 100%;
           flex-direction: column;
-          text-align: center;
+          text-align: ${backgroundImage ? "left" : "center"};
           color: #000;
         }
 
         .title {
-          font-size: 35px;
+          font-size: 40px;
           font-weight: 400;
         }
 

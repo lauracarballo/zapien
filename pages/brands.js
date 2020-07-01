@@ -14,37 +14,77 @@ export default () => (
       title={
         <>
           <div>Get ready to launch your next</div>
-          <div>campaign with</div>
-          <div>Zapien</div>
+          <div>campaign with us</div>
         </>
       }
       description={
         <>
-          <div>Change starts with us</div>
+          <div>Meet our team of Conscious Creators</div>
         </>
       }
     />
     <DescriptionSection
       title="GROW WITH US"
-      intro="We will help you target conscious consumers and measure the real impact that your brand is having."
+      intro={
+        <>
+          <div>Meet our team </div>
+          <div>of Conscious Creators </div>
+        </>
+      }
+      description={
+        <>
+          <div>We will help you target conscious consumers and</div>
+          <div>measure the real impact that your brand is having</div>
+        </>
+      }
     />
-    <MarketingSection
-      backImage="/images/blogger.jpeg"
-      frontImage="/images/blogger2.jpeg"
-    >
-      <h2>Promote Sustainability and Ethical Lifestyle</h2>
-      <p>Lorem ipsum dadum taito dac</p>
-      <Button name="Become a Conscious Creator" />
-    </MarketingSection>
-
     <MarketingSection
       backImage="/images/blogger.jpeg"
       frontImage="/images/blogger2.jpeg"
       reverse
     >
-      <h2>Promote Sustainability and Ethical Lifestyle</h2>
-      <p>Lorem ipsum dadum taito dac</p>
-      <Button name="Become a Conscious Creator" />
+      <h2 className="underline">Prepare your campaign</h2>
+      <div>
+        Post your briefing and our team will review your brand and your
+        products.
+      </div>
+      <div>We want to make sure that all products meet our eco criteria</div>
+    </MarketingSection>
+
+    <MarketingSection
+      backImage="/images/blogger.jpeg"
+      frontImage="/images/blogger2.jpeg"
+    >
+      <h2 className="underline">Meet our conscious creators</h2>
+      <div>
+        Eco influencers and conscious creators will apply to your campaign
+      </div>
+      <div>
+        You will be able to view their profiles and choose those who best fit
+        you
+      </div>
+    </MarketingSection>
+    <MarketingSection
+      backImage="/images/meeting2.jpeg"
+      frontImage="/images/meeting.jpeg"
+      reverse
+    >
+      <h2 className="underline">Start your campaign</h2>
+      <div>Once matched, you´re ready to start your campaign</div>
+      <div>
+        Contact the influencers and send all of the required details for a
+        successfull campaign
+      </div>
+    </MarketingSection>
+    <MarketingSection
+      backImage="/images/analytics.jpeg"
+      frontImage="/images/analytics2.jpeg"
+    >
+      <h2 className="underline">Track your campaign</h2>
+      <div>
+        Our technology tracks the success of the campaign and provides a
+        dashboard to view likes, comments and overall sentiment
+      </div>
     </MarketingSection>
     <Footer />
   </>

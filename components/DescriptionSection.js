@@ -14,7 +14,6 @@ const DescriptionSection = ({ title, intro, description }) => {
       </div>
       <style jsx>{`
         .background {
-          margin-top: 100px;
           background-color: #eff1f9;
         }
 
