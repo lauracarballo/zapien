@@ -85,6 +85,7 @@ const Footer = () => {
           font-size: 12px;
           margin-top: 5px;
           text-align: justify;
+          line-height: 1.5;
         }
         .footer-links {
           display: flex;

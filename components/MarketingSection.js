@@ -15,11 +15,13 @@ const MarketingSection = (props) => {
           .MarketingSection {
             display: flex;
             flex-direction: ${reverse ? "row-reverse" : "row"};
-            padding: 100px 0px;
+            min-height: 350px;
+            margin: 125px 0;
           }
 
           .content {
             width: 50%;
+            padding-right: 25px;
           }
         `}</style>
       </div>

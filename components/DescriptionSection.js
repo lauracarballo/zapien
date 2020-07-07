@@ -4,12 +4,8 @@ const DescriptionSection = ({ title, intro, description }) => {
       <div className="container">
         <div className="description-section">
           <div className="section-title underline">{title}</div>
-          <div className="styling-intro">
-            <h2>{intro}</h2>
-          </div>
-          <div className="styling-description">
-            <p>{description}</p>
-          </div>
+          <h2 className="styling-intro">{intro}</h2>
+          <div className="styling-description">{description}</div>
         </div>
       </div>
       <style jsx>{`
@@ -27,8 +23,13 @@ const DescriptionSection = ({ title, intro, description }) => {
           text-align: center;
         }
 
-        .styling-description > p {
+        .styling-description {
           font-size: 20px;
+        }
+
+        .styling-intro {
+          margin-top: 25px;
+          margin-bottom: auto;
         }
       `}</style>
     </div>

@@ -32,7 +32,10 @@ function Layout(props) {
 
         h2 {
           font-weight: 700;
-          font-size: 30px;
+          font-size: 38px;
+          padding-bottom: 15px;
+          margin-top: 0px;
+          line-height: 48px;
         }
 
         a {
@@ -42,6 +45,8 @@ function Layout(props) {
 
         p {
           margin-top: 30px;
+          line-height: 28px;
+          font-size: 18px;
         }
 
         a:hover:not(.logo) {
@@ -62,7 +67,7 @@ function Layout(props) {
           content: "";
           width: 100%;
           height: 8px;
-          background: #073a00;
+          background: #8cbf8a;
           position: absolute;
           bottom: -15px;
           left: 0;

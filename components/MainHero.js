@@ -22,7 +22,7 @@ const MainHero = ({ title, description, image }) => {
           .hero-text {
             position: relative;
             left: 0;
-            top: 4vw;
+            top: 3vw;
             width: 50%;
             padding: 15px 25px;
             color: #023a00;
@@ -44,7 +44,7 @@ const MainHero = ({ title, description, image }) => {
 
           .description {
             font-size: 18px;
-            margin-top: 8px;
+            margin-top: 35px;
           }
 
           .title {

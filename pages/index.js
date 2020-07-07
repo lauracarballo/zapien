@@ -13,13 +13,12 @@ export default () => (
     <MainHero
       title={
         <>
-          <div>Connecting</div>
-          <div>Ethical Brands with</div>
-          <div>Conscious Creators</div>
-          <div>to save the planet</div>
+          <div>Empower</div>
+          <div>#sustainability</div>
+          <div>Create content for a change</div>
         </>
       }
-      description="We connect ethical and sustainable brands with conscious creators. "
+      description="A network that connects ethical and sustainable brands with conscious influencers and creators. "
       image="/images/collage.jpg"
     />
     <DescriptionSection
@@ -27,7 +26,7 @@ export default () => (
       intro={
         <>
           <div>Reach and grow</div>
-          <div>your conscious audience</div>
+          <div>a conscious audience</div>
         </>
       }
       description={
@@ -37,12 +36,13 @@ export default () => (
         </>
       }
     />
+
     <MarketingSection
       backImage="/images/soap-handmade.jpeg"
       frontImage="/images/organic-food.jpeg"
       reverse
     >
-      <h2 className="underline">In business to save the planet</h2>
+      <h2 className="underline">Business made for the planet</h2>
       <p>
         Work with influencers and content creators that share the same values as
         your brand.
