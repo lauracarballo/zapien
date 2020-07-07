@@ -1,6 +1,7 @@
-const Button = (props) => (
+const Button = ({ name, children }) => (
   <button>
-    {props.name}
+    <div>{name}</div>
+    <div>{children}</div>
     <style jsx>{`
       button {
         background-color: white;

@@ -1,10 +1,10 @@
 import Head from "../components/Head";
 import Nav from "../components/Nav";
 import MarketingSection from "../components/MarketingSection";
-import Button from "../components/Button";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import DescriptionSection from "../components/DescriptionSection";
+import Form from "../components/Form";
 
 export default () => (
   <>
@@ -86,6 +86,46 @@ export default () => (
         dashboard to view likes, comments and overall sentiment
       </div>
     </MarketingSection>
+    <div className="form-background">
+      <div className="form-intro container">
+        <h2 className="title underline">Get to know us!</h2>
+        <div className="content">
+          <p>
+            We are happy to hear from you. <br></br> Fill out the form below and
+            we’ll get in touch as soon as possible.
+          </p>
+        </div>
+      </div>
+      <div className="forms">
+        <Form />
+      </div>
+
+      <style jsx>{`
+        .form-background {
+          display: grid;
+          grid-template-columns: 40% 70%
+        }
+        .form-intro {
+          grid-column: 1;
+          width: 80%;
+          padding: 3vw;
+        }
+        .forms {
+          grid-column: 2;
+          width: 83%;
+          padding: 5vw;
+        }
+        .title {
+          text-align: left;
+          font-size: 35px;
+        }
+        .content {
+          text-align: left
+          font-size: 18px;
+        }
+      `}</style>
+    </div>
+
     <Footer />
   </>
 );
