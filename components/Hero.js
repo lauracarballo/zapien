@@ -1,10 +1,14 @@
+import Link from "next/link";
+
 const Hero = ({ title, description, backgroundImage }) => {
   return (
     <div className="container">
       <div className="hero">
         <div className="hero-text">
           <h1 className="title">{title}</h1>
-          <h2 className="description">{description}</h2>
+          <a href="#form-section">
+            <h2 className="description">{description}</h2>
+          </a>
         </div>
       </div>
       <style jsx>{`

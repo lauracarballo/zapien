@@ -45,12 +45,13 @@ export default () => (
       reverse
     >
       <h2 className="underline">Sign up with us</h2>
-      <div>Once you sign up our team will review your profile. </div>
-      <div>
-        We want to make sure that all content creators promote and share our
+      <p>
+        Zapien is a community for conscious influencers and content creators who
+        empower positive change with their daily content. <br />
+        We don’t care about follower counts or number of likes on your photos
+        but we do review all profiles to make sure your profile aligns with our
         values.
-      </div>
-      <div>Once youre accepted youre ready to start!</div>
+      </p>
     </MarketingSection>
 
     <MarketingSection
@@ -58,37 +59,34 @@ export default () => (
       frontImage="/images/instagram.jpeg"
     >
       <h2 className="underline">Apply to campaigns</h2>
-      <div>Once you sign up our team will review your profile. </div>
-      <div>
-        We want to make sure that all content creators promote and share our
-        values.
-      </div>
-      <div>Once youre accepted youre ready to start!</div>
+      <p>
+        Ethical and sustainable brands will post their briefings on Zapien.{" "}
+        <br />
+        Through your personalise profile you'll be able to apply for campaigns
+        and connect with them. <br /> Zapien gives you the chance to work along
+        ethical and sustainable brands that match your area of expertise.
+      </p>
     </MarketingSection>
     <MarketingSection
-      backImage="/images/blogger.jpeg"
-      frontImage="/images/blogger2.jpeg"
+      backImage="/images/pic-on-pic.jpeg"
+      frontImage="/images/boxed-bottle.jpeg"
       reverse
     >
       <h2 className="underline">Craft your content</h2>
-      <div>Once you sign up our team will review your profile. </div>
-      <div>
-        We want to make sure that all content creators promote and share our
-        values.
-      </div>
-      <div>Once youre accepted youre ready to start!</div>
+      <p>
+        After being selected for a campaign, it's your time to get creative!{" "}
+        <br />
+        Your content has the ability to influence consumers towards better
+        consumer choices and can spread awareness on multiple topics. When that
+        power is used wisely it can help promote products with a positive impact
+        on the planet.
+      </p>
     </MarketingSection>
     <MarketingSection
-      backImage="/images/blogger.jpeg"
-      frontImage="/images/blogger2.jpeg"
+      backImage="/images/jump.jpeg"
+      frontImage="/images/heart-hands.jpeg"
     >
       <h2 className="underline">Make the world a better place</h2>
-      <div>Once you sign up our team will review your profile. </div>
-      <div>
-        We want to make sure that all content creators promote and share our
-        values.
-      </div>
-      <div>Once youre accepted youre ready to start!</div>
     </MarketingSection>
     <Footer />
   </>

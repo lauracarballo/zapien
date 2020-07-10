@@ -19,7 +19,7 @@ export default () => (
       }
       description={
         <>
-          <div>Meet our team of Conscious Creators</div>
+          <div>Start today</div>
         </>
       }
     />
@@ -27,8 +27,8 @@ export default () => (
       title="GROW WITH US"
       intro={
         <>
-          <div>Meet our team </div>
-          <div>of Conscious Creators </div>
+          <div>Connect with</div>
+          <div>Conscious Creators </div>
         </>
       }
       description={
@@ -39,16 +39,18 @@ export default () => (
       }
     />
     <MarketingSection
-      backImage="/images/blogger.jpeg"
-      frontImage="/images/blogger2.jpeg"
+      backImage="/images/begin.jpeg"
+      frontImage="/images/light.jpeg"
       reverse
     >
       <h2 className="underline">Prepare your campaign</h2>
-      <div>
-        Post your briefing and our team will review your brand and your
-        products.
-      </div>
-      <div>We want to make sure that all products meet our eco criteria</div>
+      <p>
+        Create your briefing and share it into your profile. <br></br>
+        We created a staging area in which our team will review the details of
+        your campaign to make sure it aligns with our core values. Once you've
+        been successfully reviewed, we'll share your briefing with all conscious
+        influencers.
+      </p>
     </MarketingSection>
 
     <MarketingSection
@@ -56,13 +58,12 @@ export default () => (
       frontImage="/images/blogger2.jpeg"
     >
       <h2 className="underline">Meet our conscious creators</h2>
-      <div>
-        Eco influencers and conscious creators will apply to your campaign
-      </div>
-      <div>
-        You will be able to view their profiles and choose those who best fit
-        you
-      </div>
+      <p>
+        Our network of conscious influencers and content creators will have a
+        look at the briefing and apply to your campaign. <br></br> Conscious
+        influencers are the voices powering change within our communities and we
+        are giving you a chance to build meaningful relationships with them.
+      </p>
     </MarketingSection>
     <MarketingSection
       backImage="/images/meeting2.jpeg"
@@ -70,23 +71,24 @@ export default () => (
       reverse
     >
       <h2 className="underline">Start your campaign</h2>
-      <div>Once matched, you´re ready to start your campaign</div>
-      <div>
-        Contact the influencers and send all of the required details for a
-        successfull campaign
-      </div>
+      <p>
+        Contact the conscious influencers and content creators who you want to
+        work with and send them all the required details for a successful
+        campaign.
+      </p>
     </MarketingSection>
     <MarketingSection
       backImage="/images/analytics.jpeg"
       frontImage="/images/analytics2.jpeg"
     >
       <h2 className="underline">Track your campaign</h2>
-      <div>
-        Our technology tracks the success of the campaign and provides a
-        dashboard to view likes, comments and overall sentiment
-      </div>
+      <p>
+        Our technology will give you access to all the data necessary to track
+        your campaign. All the content gets reviewed through our dashboard so
+        your brand can analyse the overall sentiment of the campaign.
+      </p>
     </MarketingSection>
-    <div className="form-background">
+    <section id="form-section">
       <div className="form-intro container">
         <h2 className="title underline">Get to know us!</h2>
         <div className="content">
@@ -101,7 +103,7 @@ export default () => (
       </div>
 
       <style jsx>{`
-        .form-background {
+        #form-section {
           display: grid;
           grid-template-columns: 40% 70%
         }
@@ -124,7 +126,7 @@ export default () => (
           font-size: 18px;
         }
       `}</style>
-    </div>
+    </section>
 
     <Footer />
   </>

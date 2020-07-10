@@ -22,8 +22,9 @@ const MainHero = ({ title, description, image }) => {
           .hero-text {
             position: relative;
             left: 0;
-            top: 3vw;
+            top: 5vw;
             width: 50%;
+            height: 300px;
             padding: 15px 25px;
             color: #023a00;
             background-color: rgba(192, 222, 192, 1);

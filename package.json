@@ -15,6 +15,8 @@
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-hook-form": "^6.0.0"
+    "react-hook-form": "^6.0.0",
+    "react-typist": "^2.0.5",
+    "react-typist-loop": "0.0.5"
   }
 }

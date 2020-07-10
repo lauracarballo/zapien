@@ -1,3 +1,5 @@
+import Typist from "react-typist";
+import TypistLoop from "react-typist-loop";
 import Head from "../components/Head";
 import Nav from "../components/Nav";
 import MainHero from "../components/MainHero";
@@ -12,11 +14,24 @@ export default () => (
     <Nav />
     <MainHero
       title={
-        <>
-          <div>Empower</div>
-          <div>#sustainability</div>
-          <div>Create content for a change</div>
-        </>
+        <div className="set-height">
+          <div className="inline-styling">Promote</div>
+          <TypistLoop interval={500}>
+            {[
+              "#Sustainability",
+              "#EthicalBrands",
+              "#ClimateChange",
+              "#HumanRights",
+            ].map((text) => (
+              <Typist cursor={{ show: false }} key={text} startDelay={1000}>
+                <div>
+                  <div className="hashtag">{text}</div>
+                  <Typist.Backspace count={15} delay={600} />
+                </div>
+              </Typist>
+            ))}
+          </TypistLoop>
+        </div>
       }
       description="A network that connects ethical and sustainable brands with conscious influencers and creators. "
       image="/images/collage.jpg"
@@ -64,5 +79,16 @@ export default () => (
       <Button name="Become a Conscious Creator" />
     </MarketingSection>
     <Footer />
+    <style jsx>{`
+      .hashtag {
+        font-size: 56px;
+      }
+      .set-height {
+        height: 120px;
+      }
+      .inline-styling {
+        font-weight: 400;
+      }
+    `}</style>
   </>
 );
