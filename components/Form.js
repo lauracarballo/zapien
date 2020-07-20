@@ -59,7 +59,7 @@ const Form = () => {
           />
         </div>
         <div className="form-row button">
-          <Button name="Submit" />
+          <Button href="/">Submit</Button>
         </div>
       </fieldset>
       <style jsx>{`

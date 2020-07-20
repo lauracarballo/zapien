@@ -21,9 +21,7 @@ const Nav = () => (
           </Link>
         </li>
         <li className="nav-link">
-          <Link href="/">
-            <Button name="Log In" />
-          </Link>
+          <Button href="/login">Login</Button>
         </li>
       </ul>
       <style jsx>{`

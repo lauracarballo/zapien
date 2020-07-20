@@ -1,9 +1,20 @@
-const Button = ({ name, children }) => (
-  <button>
-    <div>{name}</div>
-    <div>{children}</div>
+import Link from "next/link";
+
+const Button = ({ href, children, ...props }) => (
+  <>
+    {href ? (
+      <Link href={href}>
+        <a className="button" {...props}>
+          {children}
+        </a>
+      </Link>
+    ) : (
+      <button className="button" {...props}>
+        {children}
+      </button>
+    )}
     <style jsx>{`
-      button {
+      .button {
         background-color: white;
         color: #036200;
         padding: 5px 35px;
@@ -11,12 +22,12 @@ const Button = ({ name, children }) => (
         border: 2px solid #036200;
       }
 
-      button:hover {
+      .button:hover {
         background-color: #036200;
         color: white;
       }
     `}</style>
-  </button>
+  </>
 );
 
 export default Button;

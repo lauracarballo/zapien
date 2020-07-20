@@ -24,8 +24,8 @@ const MainHero = ({ title, description, image }) => {
             left: 0;
             top: 5vw;
             width: 50%;
-            height: 300px;
-            padding: 15px 25px;
+            height: 320px;
+            padding: 25px 25px;
             color: #023a00;
             background-color: rgba(192, 222, 192, 1);
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);

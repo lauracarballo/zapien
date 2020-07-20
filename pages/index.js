@@ -16,21 +16,25 @@ export default () => (
       title={
         <div className="set-height">
           <div className="inline-styling">Promote</div>
-          <TypistLoop interval={500}>
-            {[
-              "#Sustainability",
-              "#EthicalBrands",
-              "#ClimateChange",
-              "#HumanRights",
-            ].map((text) => (
-              <Typist cursor={{ show: false }} key={text} startDelay={1000}>
-                <div>
-                  <div className="hashtag">{text}</div>
-                  <Typist.Backspace count={15} delay={600} />
-                </div>
-              </Typist>
-            ))}
-          </TypistLoop>
+          <div className="typist">
+            <div className="hashtag-icon">#</div>
+            <TypistLoop interval={300}>
+              {[
+                "Sustainability",
+                "EthicalBrands",
+                "ClimateChange",
+                "FairTrade",
+                "HumanRights",
+              ].map((text) => (
+                <Typist cursor={{ show: false }} key={text} startDelay={300}>
+                  <div>
+                    <div className="hashtag-text">{text}</div>
+                    <Typist.Backspace count={text.length} delay={1500} />
+                  </div>
+                </Typist>
+              ))}
+            </TypistLoop>
+          </div>
         </div>
       }
       description="A network that connects ethical and sustainable brands with conscious influencers and creators. "
@@ -62,7 +66,7 @@ export default () => (
         Work with influencers and content creators that share the same values as
         your brand.
       </p>
-      <Button name="I’m a Brand" />
+      <Button href="/brands">I'm a Brand</Button>
     </MarketingSection>
 
     <MarketingSection
@@ -76,11 +80,19 @@ export default () => (
         Zapien is a community that incentives influencers and content creators
         to create content that empowers positive change.
       </p>
-      <Button name="Become a Conscious Creator" />
+      <Button href="/creators">I'm a Conscious Creators</Button>
     </MarketingSection>
     <Footer />
     <style jsx>{`
-      .hashtag {
+      .typist {
+        display: flex;
+      }
+
+      .hashtag-icon {
+        font-size: 60px;
+      }
+
+      .hashtag-text {
         font-size: 56px;
       }
       .set-height {
