@@ -6,9 +6,7 @@ const Hero = ({ title, description, backgroundImage }) => {
       <div className="hero">
         <div className="hero-text">
           <h1 className="title">{title}</h1>
-          <a href="#form-section">
-            <h2 className="description">{description}</h2>
-          </a>
+          <h2 className="description">{description}</h2>
         </div>
       </div>
       <style jsx>{`

@@ -92,6 +92,11 @@ const Footer = () => {
           list-style: none;
           font-size: 12px;
         }
+
+        .footer-linklist > li {
+          padding-bottom: 6px;
+        }
+
         .copyright {
           margin-top: 35px;
           font-size: 0.83333em;

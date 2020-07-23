@@ -18,9 +18,21 @@ export default () => (
         </>
       }
       description={
-        <>
-          <div>Start today</div>
-        </>
+        <a
+          onClick={(event) => {
+            event.preventDefault();
+            const formSection = document.getElementById("form-section");
+            const location = formSection.getBoundingClientRect();
+            scrollTo({
+              top: location.top,
+              left: 0,
+              behavior: "smooth",
+            });
+          }}
+          href="#form-section"
+        >
+          Start today
+        </a>
       }
     />
     <DescriptionSection
@@ -57,7 +69,7 @@ export default () => (
       backImage="/images/blogger.jpeg"
       frontImage="/images/blogger2.jpeg"
     >
-      <h2 className="underline">Meet our conscious creators</h2>
+      <h2 className="underline">Meet conscious creators</h2>
       <p>
         Our network of conscious influencers and content creators will have a
         look at the briefing and apply to your campaign. <br></br> Conscious
@@ -72,9 +84,8 @@ export default () => (
     >
       <h2 className="underline">Start your campaign</h2>
       <p>
-        Contact the conscious influencers and content creators who you want to
-        work with and send them all the required details for a successful
-        campaign.
+        Contact conscious influencers and content creators who you want to work
+        with and send them all the required details for a successful campaign.
       </p>
     </MarketingSection>
     <MarketingSection
@@ -125,6 +136,7 @@ export default () => (
           text-align: left
           font-size: 18px;
         }
+        
       `}</style>
     </section>
 

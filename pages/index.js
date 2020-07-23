@@ -95,11 +95,25 @@ export default () => (
       .hashtag-text {
         font-size: 56px;
       }
-      .set-height {
-        height: 120px;
-      }
+
       .inline-styling {
         font-weight: 400;
+      }
+
+      @media screen and (max-width: 768px) {
+        .inline-styling {
+          margin-botton: 10px;
+        }
+
+        .hashtag-icon {
+          font-size: 35px;
+        }
+        .hashtag-text {
+          font-size: 36px;
+        }
+        .set-height {
+          height: 90px;
+        }
       }
     `}</style>
   </>

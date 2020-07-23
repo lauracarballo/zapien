@@ -23,6 +23,15 @@ const MarketingSection = (props) => {
             width: 50%;
             padding-right: 25px;
           }
+
+          @media screen and (max-width: 768px) {
+            .MarketingSection {
+              display: block;
+            }
+            .content {
+              width: 100%;
+            }
+          }
         `}</style>
       </div>
     </div>

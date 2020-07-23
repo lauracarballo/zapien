@@ -48,6 +48,26 @@ const Image = ({ frontImage, backImage, reverse }) => {
           border-radius: 5px;
           object-fit: cover;
         }
+        @media screen and (max-width: 768px) {
+            .img-container {
+              width: 100%;
+              display: block;
+              margin-top: 30px;
+            }
+            .back {
+              display: none;
+            }
+            .back-reverse {
+              display: none;
+            }
+            .front {
+              position: static;
+              width: fit-content;
+            }
+            .front-reverse {
+              position: static;
+              width: fit-content;
+            }
       `}</style>
     </div>
   );

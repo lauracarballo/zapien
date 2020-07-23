@@ -88,6 +88,29 @@ function Layout(props) {
           padding-right: 55px;
           padding-left: 55px;
         }
+        @media screen and (max-width: 768px) {
+          .container {
+            padding-right: 30px;
+            padding-left: 30px;
+          }
+          h1 {
+            font-weight: 700;
+            font-size: 35px;
+          }
+          h2 {
+            font-weight: 700;
+            font-size: 30px;
+            padding-bottom: 15px;
+            margin-top: 0px;
+            line-height: 40px;
+          }
+
+          p {
+            margin-top: 30px;
+            line-height: 20px;
+            font-size: 18px;
+          }
+        }
       `}</style>
     </div>
   );
