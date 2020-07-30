@@ -18,12 +18,14 @@ const Hero = ({ title, description, backgroundImage }) => {
           height: 50vh;
           min-height: 350px;
           margin: 25px 0;
-          ${backgroundImage &&
-          `
+          ${
+            backgroundImage &&
+            `
           background-image: url(${backgroundImage});
           background-repeat: no-repeat;
           background-position: right top;
-          background-size: 50%;`}
+          background-size: 50%;`
+          }
         }
 
         .hero-text {
@@ -41,6 +43,10 @@ const Hero = ({ title, description, backgroundImage }) => {
         .description {
           font-size: 15px;
           text-decoration: underline;
+        }
+        @media screen and (max-width: 768px){
+          .title {
+          font-size: 35px;
         }
       `}</style>
     </div>

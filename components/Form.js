@@ -106,6 +106,14 @@ const Form = () => {
           display: flex;
           justify-content: flex-end;
         }
+        @media screen and (max-width: 768px) {
+          .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 6px 0;
+            max-width: 600px;
+          }
+        }
       `}</style>
     </form>
   );

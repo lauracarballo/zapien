@@ -136,6 +136,25 @@ export default () => (
           text-align: left
           font-size: 18px;
         }
+         @media screen and (max-width: 768px) {
+          #form-section {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            grid-template-rows: 25% 70%;
+          }
+          .form-intro {
+            grid-column: 1 / 3;
+            grid-row: 1;
+            width: 80%;
+            padding: 0;
+          }
+          .forms {
+            grid-column: 1 / 3;
+            grid-row: 2;
+            width: 100%;
+            padding: 5vw;
+          }
+        }
         
       `}</style>
     </section>

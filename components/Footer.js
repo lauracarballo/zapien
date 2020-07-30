@@ -101,6 +101,28 @@ const Footer = () => {
           margin-top: 35px;
           font-size: 0.83333em;
         }
+        @media screen and (max-width: 768px) {
+          .info {
+            display: grid;
+            grid-template-columns: 60% 40%;
+          }
+
+          .about {
+            grid-row: 2;
+            grid-column: 1 / 3;
+          }
+
+          .footer-links {
+            display: flex;
+            padding-bottom: 50px;
+            justify-content: space-between;
+            padding-left: 0px;
+          }
+
+          .footer-linklist {
+            padding-inline-start: 5px;
+          }
+        }
       `}</style>
     </footer>
   );

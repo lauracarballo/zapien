@@ -44,7 +44,7 @@ function Layout(props) {
         }
 
         p {
-          margin-top: 30px;
+          margin-top: 55px;
           line-height: 28px;
           font-size: 18px;
         }

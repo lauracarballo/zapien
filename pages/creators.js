@@ -19,7 +19,7 @@ export default () => (
       }
       description={
         <>
-          <div>Campaign for brands that share your values</div>
+          <div>Start now</div>
         </>
       }
       backgroundImage="/images/camera.jpeg"
@@ -28,14 +28,14 @@ export default () => (
       title="GROW WITH US"
       intro={
         <>
-          <div>Meet our team </div>
-          <div>of Conscious Creators </div>
+          <div>Create content that</div>
+          <div>inspires positive change</div>
         </>
       }
       description={
         <>
-          <div>We will help you target conscious consumers and</div>
-          <div>measure the real impact that your brand is having</div>
+          <div>Work along brands that share your values</div>
+          <div>and improve your social impact</div>
         </>
       }
     />
@@ -46,11 +46,10 @@ export default () => (
     >
       <h2 className="underline">Sign up with us</h2>
       <p>
-        Zapien is a community for conscious influencers and content creators who
-        empower positive change with their daily content. <br />
-        We don’t care about follower counts or number of likes on your photos
-        but we do review all profiles to make sure your profile aligns with our
-        values.
+        Follower counts or number of likes is not a filter for us.
+        <br />
+        Our main concern is building a community of conscious influencers and
+        content creators that empower positive change with their daily content.
       </p>
     </MarketingSection>
 
@@ -60,11 +59,9 @@ export default () => (
     >
       <h2 className="underline">Apply to campaigns</h2>
       <p>
-        Ethical and sustainable brands will post their briefings on Zapien.{" "}
-        <br />
-        Through your personalise profile you'll be able to apply for campaigns
-        and connect with them. <br /> Zapien gives you the chance to work along
-        ethical and sustainable brands that match your area of expertise.
+        Through your personalized profile you'll be able to view and connect
+        with ethical and sustainable brands that care for the planet as much as
+        you do.
       </p>
     </MarketingSection>
     <MarketingSection
@@ -74,12 +71,10 @@ export default () => (
     >
       <h2 className="underline">Craft your content</h2>
       <p>
-        After being selected for a campaign, it's your time to get creative!{" "}
+        After being selected for a campaign, it's all about getting creative!{" "}
         <br />
-        Your content has the ability to influence consumers towards better
-        consumer choices and can spread awareness on multiple topics. When that
-        power is used wisely it can help promote products with a positive impact
-        on the planet.
+        Share, post and reach out to consumers to influence them towards better
+        choices.
       </p>
     </MarketingSection>
     <MarketingSection
@@ -87,6 +82,11 @@ export default () => (
       frontImage="/images/heart-hands.jpeg"
     >
       <h2 className="underline">Make the world a better place</h2>
+      <p>
+        Your content has the ability to spread awareness on social and climate
+        issues. When that power is used wisely it can help promote products with
+        a positive impact on the planet.
+      </p>
     </MarketingSection>
     <Footer />
   </>
