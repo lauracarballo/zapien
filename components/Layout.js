@@ -38,6 +38,11 @@ function Layout(props) {
           line-height: 48px;
         }
 
+        h3 {
+          font-size: 30px;
+          margin-top: 50px;
+        }
+
         a {
           color: #333;
           text-decoration: none;
@@ -57,6 +62,10 @@ function Layout(props) {
         ul {
           list-style: none;
           margin: 0px;
+        }
+
+        .m50 {
+          margin-top: 50px;
         }
 
         .underline {
@@ -88,6 +97,12 @@ function Layout(props) {
           padding-right: 55px;
           padding-left: 55px;
         }
+
+        .legal > p {
+          font-size: 15px;
+          margin-top: 10px;
+        }
+
         @media screen and (max-width: 768px) {
           .container {
             padding-right: 30px;

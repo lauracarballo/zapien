@@ -4,116 +4,146 @@ import MarketingSection from "../components/MarketingSection";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import DescriptionSection from "../components/DescriptionSection";
-import Form from "../components/Form";
+import Form, { Input } from "../components/Form";
+import { useForm } from "react-hook-form";
 
-export default () => (
-  <>
-    <Head title="Zapien" />
-    <Nav />
-    <Hero
-      title={
-        <>
-          <div>Get ready to launch your next</div>
-          <div>campaign with us</div>
-        </>
-      }
-      description={
-        <a
-          onClick={(event) => {
-            event.preventDefault();
-            const formSection = document.getElementById("form-section");
-            const location = formSection.getBoundingClientRect();
-            scrollTo({
-              top: location.top,
-              left: 0,
-              behavior: "smooth",
-            });
-          }}
-          href="#form-section"
-        >
-          Start today
-        </a>
-      }
-    />
-    <DescriptionSection
-      title="GROW WITH US"
-      intro={
-        <>
-          <div>Connect with</div>
-          <div>Conscious Creators </div>
-        </>
-      }
-      description={
-        <>
-          <div>We will help you target conscious consumers and</div>
-          <div>measure the real impact that your brand is having</div>
-        </>
-      }
-    />
-    <MarketingSection
-      backImage="/images/begin.jpeg"
-      frontImage="/images/light.jpeg"
-      reverse
-    >
-      <h2 className="underline">Prepare your campaign</h2>
-      <p>
-        Create your briefing and share it into your profile. <br></br>
-        We created a staging area in which our team will review the details of
-        your campaign to make sure it aligns with our core values. Once you've
-        been successfully reviewed, we'll share your briefing with all conscious
-        influencers.
-      </p>
-    </MarketingSection>
+export default () => {
+  const { register, errors, handleSubmit } = useForm();
+  return (
+    <>
+      <Head title="Zapien" />
+      <Nav />
+      <Hero
+        title={
+          <>
+            <div>Get ready to launch your next</div>
+            <div>campaign with us</div>
+          </>
+        }
+        description={
+          <a
+            onClick={(event) => {
+              event.preventDefault();
+              const formSection = document.getElementById("form-section");
+              const location = formSection.getBoundingClientRect();
+              scrollTo({
+                top: location.top,
+                left: 0,
+                behavior: "smooth",
+              });
+            }}
+            href="#form-section"
+          >
+            Start today
+          </a>
+        }
+      />
+      <DescriptionSection
+        title="GROW WITH US"
+        intro={
+          <>
+            <div>Connect with</div>
+            <div>Conscious Creators </div>
+          </>
+        }
+        description={
+          <>
+            <div>We will help you target conscious consumers and</div>
+            <div>measure the real impact that your brand is having</div>
+          </>
+        }
+      />
+      <MarketingSection
+        backImage="/images/begin.jpeg"
+        frontImage="/images/light.jpeg"
+        reverse
+      >
+        <h2 className="underline">Prepare your campaign</h2>
+        <p>
+          Create your briefing and share it into your profile. <br></br>
+          We created a staging area in which our team will review the details of
+          your campaign to make sure it aligns with our core values. Once you've
+          been successfully reviewed, we'll share your briefing with all
+          conscious influencers.
+        </p>
+      </MarketingSection>
 
-    <MarketingSection
-      backImage="/images/blogger.jpeg"
-      frontImage="/images/blogger2.jpeg"
-    >
-      <h2 className="underline">Meet conscious creators</h2>
-      <p>
-        Our network of conscious influencers and content creators will have a
-        look at the briefing and apply to your campaign. <br></br> Conscious
-        influencers are the voices powering change within our communities and we
-        are giving you a chance to build meaningful relationships with them.
-      </p>
-    </MarketingSection>
-    <MarketingSection
-      backImage="/images/meeting2.jpeg"
-      frontImage="/images/meeting.jpeg"
-      reverse
-    >
-      <h2 className="underline">Start your campaign</h2>
-      <p>
-        Contact conscious influencers and content creators who you want to work
-        with and send them all the required details for a successful campaign.
-      </p>
-    </MarketingSection>
-    <MarketingSection
-      backImage="/images/analytics.jpeg"
-      frontImage="/images/analytics2.jpeg"
-    >
-      <h2 className="underline">Track your campaign</h2>
-      <p>
-        Our technology will give you access to all the data necessary to track
-        your campaign. All the content gets reviewed through our dashboard so
-        your brand can analyse the overall sentiment of the campaign.
-      </p>
-    </MarketingSection>
-    <section id="form-section">
-      <div className="form-intro container">
-        <h2 className="title underline">Get to know us!</h2>
-        <div className="content">
-          <p>
-            We are happy to hear from you. <br></br> Fill out the form below and
-            we’ll get in touch as soon as possible.
-          </p>
+      <MarketingSection
+        backImage="/images/blogger.jpeg"
+        frontImage="/images/blogger2.jpeg"
+      >
+        <h2 className="underline">Meet conscious creators</h2>
+        <p>
+          Our network of conscious influencers and content creators will have a
+          look at the briefing and apply to your campaign. <br></br> Conscious
+          influencers are the voices powering change within our communities and
+          we are giving you a chance to build meaningful relationships with
+          them.
+        </p>
+      </MarketingSection>
+      <MarketingSection
+        backImage="/images/meeting2.jpeg"
+        frontImage="/images/meeting.jpeg"
+        reverse
+      >
+        <h2 className="underline">Start your campaign</h2>
+        <p>
+          Contact conscious influencers and content creators who you want to
+          work with and send them all the required details for a successful
+          campaign.
+        </p>
+      </MarketingSection>
+      <MarketingSection
+        backImage="/images/analytics.jpeg"
+        frontImage="/images/analytics2.jpeg"
+      >
+        <h2 className="underline">Track your campaign</h2>
+        <p>
+          Our technology will give you access to all the data necessary to track
+          your campaign. All the content gets reviewed through our dashboard so
+          your brand can analyse the overall sentiment of the campaign.
+        </p>
+      </MarketingSection>
+      <section id="form-section">
+        <div className="form-intro container">
+          <h2 className="title underline">Get to know us!</h2>
+          <div className="content">
+            <p>
+              We are happy to hear from you. <br></br> Fill out the form below
+              and we’ll get in touch as soon as possible.
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="forms">
-        <Form />
-      </div>
+        <div className="forms">
+          <Form onSubmit={handleSubmit((data) => console.log(data))}>
+            <Input
+              name="name"
+              label="Name"
+              ref={register({ required: true })}
+              error={errors.name && "Your name is required"}
+            />
+            <Input
+              name="email"
+              label="Email"
+              ref={register({ required: true })}
+              error={errors.email && "Please enter a valid email address"}
+            />
+            <Input
+              name="companyName"
+              label="Company"
+              ref={register({ required: true })}
+              error={errors.companyName && "Your company name is required"}
+            />
+            <Input
+              name="companyWebsite"
+              label="Company Website"
+              ref={register}
+              error={errors.companyWebsite}
+            />
+          </Form>
+        </div>
 
-      <style jsx>{`
+        <style jsx>{`
         #form-section {
           display: grid;
           grid-template-columns: 40% 70%
@@ -157,8 +187,9 @@ export default () => (
         }
         
       `}</style>
-    </section>
+      </section>
 
-    <Footer />
-  </>
-);
+      <Footer />
+    </>
+  );
+};

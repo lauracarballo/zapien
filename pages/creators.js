@@ -1,7 +1,6 @@
 import Head from "../components/Head";
 import Nav from "../components/Nav";
 import MarketingSection from "../components/MarketingSection";
-import Button from "../components/Button";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import DescriptionSection from "../components/DescriptionSection";

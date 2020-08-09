@@ -35,17 +35,17 @@ const Footer = () => {
           <div className="footer-links">
             <ul className="footer-linklist">
               <li>
-                <Link href="/">
+                <Link href="/contact">
                   <a>Contact Us</a>
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/privacy">
                   <a>Privacy Policy</a>
                 </Link>
               </li>
               <li>
-                <Link href="/">
+                <Link href="/terms">
                   <a>Terms</a>
                 </Link>
               </li>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const Button = ({ href, children, ...props }) => (
+const Button = ({ type = "button", href, children, ...props }) => (
   <>
     {href ? (
       <Link href={href}>
@@ -9,7 +9,7 @@ const Button = ({ href, children, ...props }) => (
         </a>
       </Link>
     ) : (
-      <button className="button" {...props}>
+      <button type={type} className="button" {...props}>
         {children}
       </button>
     )}
