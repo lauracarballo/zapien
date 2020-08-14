@@ -10,12 +10,19 @@ Run:
 npm run dev
 ```
 
-## Database setup
+## Database setup (locally)
 
 Start local Postgres instance:
 
 ```
 pg_ctl -D /usr/local/var/postgres start
+```
+
+Create Database (in pqsql):
+
+```
+> psql
+CREATE DATABASE zapien;
 ```
 
 Create initial SQL schema:
@@ -26,13 +33,14 @@ psql -h localhost -d zapien -U james -f schema.sql
 
 Sync data from Prisma Schema to Database:
 
-```
-npx prisma migrate save --experimental
+```bash
+npm run migrate
+# Confirm everything looks okay, then:
 npx prisma migrate up --experimental
 ```
 
 Sync Database to Prisma Schema:
 
 ```
-npx prisma introspect
+npm run introspect
 ```

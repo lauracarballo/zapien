@@ -6,10 +6,11 @@ export default async (req, res) => {
   const prisma = new PrismaClient({ log: ['query'] });
 
   try {
-    const { name, email, message, companyName, website } = req.body;
+    const { name, email, message, companyName, website, type } = req.body;
     // console.dir(req, { depth: null });
     await prisma.contact.create({
       data: {
+        type,
         name,
         email,
         message,

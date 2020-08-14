@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "migrate": "prisma migrate save --experimental",
+    "introspect": "prisma introspect && prisma generate"
   },
   "keywords": [],
   "author": "",

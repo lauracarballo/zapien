@@ -57,6 +57,7 @@ model Contact {
   id          Int     @default(autoincrement()) @id
   name        String
   email       String
+  type        Role
   message     String?
   companyName String?
   website     String?
