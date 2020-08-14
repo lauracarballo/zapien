@@ -7,6 +7,7 @@ function Layout(props) {
           box-sizing: border-box;
           font-weight: 400;
           font-size: 15px;
+          scroll-behavior: smooth;
         }
 
         *,
@@ -49,7 +50,6 @@ function Layout(props) {
         }
 
         p {
-          margin-top: 55px;
           line-height: 28px;
           font-size: 18px;
         }
@@ -65,7 +65,7 @@ function Layout(props) {
         }
 
         .m50 {
-          margin-top: 50px;
+          margin: 50px 0;
         }
 
         .underline {
@@ -81,6 +81,11 @@ function Layout(props) {
           bottom: -15px;
           left: 0;
           max-width: 150px;
+        }
+
+        .center {
+          display: grid;
+          place-items: center;
         }
 
         .logo {

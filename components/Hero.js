@@ -1,12 +1,10 @@
-import Link from "next/link";
-
 const Hero = ({ title, description, backgroundImage }) => {
   return (
     <div className="container">
       <div className="hero">
         <div className="hero-text">
           <h1 className="title">{title}</h1>
-          <h2 className="description">{description}</h2>
+          <div className="description">{description}</div>
         </div>
       </div>
       <style jsx>{`
@@ -41,8 +39,7 @@ const Hero = ({ title, description, backgroundImage }) => {
         }
 
         .description {
-          font-size: 15px;
-          text-decoration: underline;
+          font-size: 16px;
         }
         @media screen and (max-width: 768px){
           .title {

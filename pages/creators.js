@@ -4,6 +4,7 @@ import MarketingSection from "../components/MarketingSection";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import DescriptionSection from "../components/DescriptionSection";
+import StyledLink from "../components/StyledLink";
 
 export default () => (
   <>
@@ -17,9 +18,9 @@ export default () => (
         </>
       }
       description={
-        <>
-          <div>Start now</div>
-        </>
+        <StyledLink href={"#form-section"}>
+          <div>Join us today</div>
+        </StyledLink>
       }
       backgroundImage="/images/camera.jpeg"
     />
@@ -38,12 +39,16 @@ export default () => (
         </>
       }
     />
+    {/* <div className="center m50">
+      <span className="underline">HOW IT WORKS</span>
+    </div> */}
+
     <MarketingSection
       backImage="/images/zero-waste.jpeg"
       frontImage="/images/smile.jpeg"
       reverse
     >
-      <h2 className="underline">Sign up with us</h2>
+      <h2 className="underline"> Step 1: Sign up with us</h2>
       <p>
         Follower counts or number of likes is not a filter for us.
         <br />
@@ -56,7 +61,7 @@ export default () => (
       backImage="/images/think-outside-the-box.jpeg"
       frontImage="/images/instagram.jpeg"
     >
-      <h2 className="underline">Apply to campaigns</h2>
+      <h2 className="underline">Step 2: Apply</h2>
       <p>
         Through your personalized profile you'll be able to view and connect
         with ethical and sustainable brands that care for the planet as much as
@@ -68,7 +73,7 @@ export default () => (
       frontImage="/images/boxed-bottle.jpeg"
       reverse
     >
-      <h2 className="underline">Craft your content</h2>
+      <h2 className="underline">Step 3: Craft your content</h2>
       <p>
         After being selected for a campaign, it's all about getting creative!{" "}
         <br />

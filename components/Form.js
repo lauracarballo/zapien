@@ -2,11 +2,11 @@ import Button from "./Button";
 import { forwardRef } from "react";
 
 export const Input = forwardRef(
-  ({ name, label, type = "text", error }, ref) => {
+  ({ name, label, type = "text", error, ...props }, ref) => {
     return (
       <div className="form-row">
         <label htmlFor={name}>{label}</label>
-        <input id={name} name={name} type={type} ref={ref} />
+        <input id={name} name={name} type={type} ref={ref} {...props} />
         {error}
         <style jsx>{`
           .form-row {
