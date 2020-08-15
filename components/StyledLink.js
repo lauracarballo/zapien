@@ -18,6 +18,7 @@ const StyledLink = ({ href, children, ...props }) => {
       <style jsx>{`
         .link__container {
           display: flex;
+          font-weight: 700;
         }
 
         .link {

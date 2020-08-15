@@ -1,3 +1,5 @@
+import Button from "../components/Button";
+
 const MainHero = ({ title, description, image }) => {
   return (
     <div className="background-media">
@@ -6,6 +8,12 @@ const MainHero = ({ title, description, image }) => {
           <div className="hero-text">
             <h1 className="title underline">{title}</h1>
             <p className="description">{description}</p>
+            <div style={{ paddingTop: 15 }}>
+              <Button href="/brands" style={{ marginRight: 25 }}>
+                I'M A BRAND
+              </Button>
+              <Button href="/creators">I'M A CREATOR</Button>
+            </div>
           </div>
           <div className="image-wrapper">
             <div className="hero-image">
@@ -20,17 +28,27 @@ const MainHero = ({ title, description, image }) => {
               min-height: 600px;
             }
 
+            .button {
+              margin-right: 15px;
+            }
+
             .hero-text {
               position: relative;
               left: 0;
               top: 5vw;
               width: 50%;
-              height: 320px;
+              height: 365px;
               padding: 25px 25px;
               color: #023a00;
               background-color: rgba(192, 222, 192, 1);
               box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
               z-index: 1;
+            }
+
+            .button__container {
+              display: flex;
+              width: 75%;
+              justify-content: space-between;
             }
 
             .image-wrapper {

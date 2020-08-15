@@ -1,10 +1,10 @@
-import Head from '../components/Head';
-import Nav from '../components/Nav';
-import MarketingSection from '../components/MarketingSection';
-import Hero from '../components/Hero';
-import Footer from '../components/Footer';
-import DescriptionSection from '../components/DescriptionSection';
-import StyledLink from '../components/StyledLink';
+import Head from "../components/Head";
+import Nav from "../components/Nav";
+import MarketingSection from "../components/MarketingSection";
+import Hero from "../components/Hero";
+import Footer from "../components/Footer";
+import DescriptionSection from "../components/DescriptionSection";
+import StyledLink from "../components/StyledLink";
 
 export default () => (
   <>
@@ -39,17 +39,21 @@ export default () => (
         </>
       }
     />
-    {/* <div className="center m50">
-      <span className="underline">HOW IT WORKS</span>
-    </div> */}
+    <div className="marketing_title center m50">
+      <h3 className="underline">HOW IT WORKS</h3>
+    </div>
 
-    <MarketingSection backImage="/images/zero-waste.jpeg" frontImage="/images/smile.jpeg" reverse>
-      <h2 className="underline"> Step 1: Sign up with us</h2>
+    <MarketingSection
+      backImage="/images/zero-waste.jpeg"
+      frontImage="/images/smile.jpeg"
+      reverse
+    >
+      <h2 className="underline"> 01. Sign up with us</h2>
       <p>
         Follower counts or number of likes is not a filter for us.
         <br />
-        Our main concern is building a community of conscious influencers and content creators that
-        empower positive change with their daily content.
+        Our main concern is building a community of conscious influencers and
+        content creators that empower positive change with their daily content.
       </p>
     </MarketingSection>
 
@@ -57,10 +61,11 @@ export default () => (
       backImage="/images/think-outside-the-box.jpeg"
       frontImage="/images/instagram.jpeg"
     >
-      <h2 className="underline">Step 2: Apply</h2>
+      <h2 className="underline">02. Apply</h2>
       <p>
-        Through your personalized profile you'll be able to view and connect with ethical and
-        sustainable brands that care for the planet as much as you do.
+        Through your personalized profile you'll be able to view and connect
+        with ethical and sustainable brands that care for the planet as much as
+        you do.
       </p>
     </MarketingSection>
     <MarketingSection
@@ -68,19 +73,31 @@ export default () => (
       frontImage="/images/boxed-bottle.jpeg"
       reverse
     >
-      <h2 className="underline">Step 3: Craft your content</h2>
+      <h2 className="underline">03. Craft your content</h2>
       <p>
-        After being selected for a campaign, it's all about getting creative! <br />
-        Share, post and reach out to consumers to influence them towards better choices.
+        After being selected for a campaign, it's all about getting creative!{" "}
+        <br />
+        Share, post and reach out to consumers to influence them towards better
+        choices.
       </p>
     </MarketingSection>
-    <MarketingSection backImage="/images/jump.jpeg" frontImage="/images/heart-hands.jpeg">
+    <MarketingSection
+      backImage="/images/jump.jpeg"
+      frontImage="/images/heart-hands.jpeg"
+    >
       <h2 className="underline">Make the world a better place</h2>
       <p>
-        Your content has the ability to spread awareness on social and climate issues. When that
-        power is used wisely it can help promote products with a positive impact on the planet.
+        Your content has the ability to spread awareness on social and climate
+        issues. When that power is used wisely it can help promote products with
+        a positive impact on the planet.
       </p>
     </MarketingSection>
     <Footer />
+    <style jsx>{`
+      .marketing_title {
+        display: grid;
+        place-items: center;
+      }
+    `}</style>
   </>
 );

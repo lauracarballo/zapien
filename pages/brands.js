@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import Head from '../components/Head';
-import Nav from '../components/Nav';
-import MarketingSection from '../components/MarketingSection';
-import Hero from '../components/Hero';
-import Footer from '../components/Footer';
-import DescriptionSection from '../components/DescriptionSection';
-import Form, { Input } from '../components/Form';
-import { useForm } from 'react-hook-form';
-import StyledLink from '../components/StyledLink';
+import { useState } from "react";
+import Head from "../components/Head";
+import Nav from "../components/Nav";
+import MarketingSection from "../components/MarketingSection";
+import Hero from "../components/Hero";
+import Footer from "../components/Footer";
+import DescriptionSection from "../components/DescriptionSection";
+import Form, { Input } from "../components/Form";
+import { useForm } from "react-hook-form";
+import StyledLink from "../components/StyledLink";
 
 export default () => {
   const { register, errors, handleSubmit } = useForm();
@@ -15,12 +15,12 @@ export default () => {
 
   function handleFormSubmit(event) {
     event.persist();
-    handleSubmit(async data => {
+    handleSubmit(async (data) => {
       console.log(data);
-      const request = await fetch('/api/form', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type: 'BRAND', ...data }),
+      const request = await fetch("/api/form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "BRAND", ...data }),
       });
       const { submitted } = await request.json();
       if (submitted) {
@@ -42,7 +42,20 @@ export default () => {
           </>
         }
         description={
-          <StyledLink className="center" href="#contact">
+          <StyledLink
+            className="center"
+            href="#contact"
+            onClick={(event) => {
+              event.preventDefault();
+              const formSection = document.getElementById("contact");
+              const location = formSection.getBoundingClientRect();
+              scrollTo({
+                top: location.top,
+                left: 0,
+                behavior: "smooth",
+              });
+            }}
+          >
             <div>Get started</div>
           </StyledLink>
         }
@@ -63,29 +76,46 @@ export default () => {
           </>
         }
       />
-      <MarketingSection backImage="/images/begin.jpeg" frontImage="/images/light.jpeg" reverse>
-        <h2 className="underline">Step 1: Prepare your campaign</h2>
+      <div className="marketing_title center m50">
+        <h3 className="underline">HOW IT WORKS</h3>
+      </div>
+      <MarketingSection
+        backImage="/images/begin.jpeg"
+        frontImage="/images/light.jpeg"
+        reverse
+      >
+        <h2 className="underline">01. Prepare your campaign</h2>
         <p>
           Create your briefing and share it into your profile. <br></br>
-          We created a staging area in which our team will review the details of your campaign to
-          make sure it aligns with our core values. Once you've been successfully reviewed, we'll
-          share your briefing with all conscious influencers.
+          We created a staging area in which our team will review the details of
+          your campaign to make sure it aligns with our core values. Once you've
+          been successfully reviewed, we'll share your briefing with all
+          conscious influencers.
         </p>
       </MarketingSection>
-      <MarketingSection backImage="/images/blogger.jpeg" frontImage="/images/blogger2.jpeg">
-        <h2 className="underline">Step 2: Meet conscious creators</h2>
+      <MarketingSection
+        backImage="/images/blogger.jpeg"
+        frontImage="/images/blogger2.jpeg"
+      >
+        <h2 className="underline">02. Meet conscious creators</h2>
         <p>
-          Our network of conscious influencers and content creators will have a look at the briefing
-          and apply to your campaign. <br></br> Conscious influencers are the voices powering change
-          within our communities and we are giving you a chance to build meaningful relationships
-          with them.
+          Our network of conscious influencers and content creators will have a
+          look at the briefing and apply to your campaign. <br></br> Conscious
+          influencers are the voices powering change within our communities and
+          we are giving you a chance to build meaningful relationships with
+          them.
         </p>
       </MarketingSection>
-      <MarketingSection backImage="/images/meeting2.jpeg" frontImage="/images/meeting.jpeg" reverse>
-        <h2 className="underline">Step 3: Start your campaign</h2>
+      <MarketingSection
+        backImage="/images/meeting2.jpeg"
+        frontImage="/images/meeting.jpeg"
+        reverse
+      >
+        <h2 className="underline">03. Start your campaign</h2>
         <p>
-          Contact conscious influencers and content creators who you want to work with and send them
-          all the required details for a successful campaign.
+          Contact conscious influencers and content creators who you want to
+          work with and send them all the required details for a successful
+          campaign.
         </p>
       </MarketingSection>
       {/* <MarketingSection
@@ -104,8 +134,8 @@ export default () => {
           <h2 className="title underline">Get to know us!</h2>
           <div className="content">
             <p>
-              We are happy to hear from you. <br></br> Fill out the form below and we’ll get in
-              touch as soon as possible.
+              We are happy to hear from you. <br></br> Fill out the form below
+              and we’ll get in touch as soon as possible.
             </p>
           </div>
         </div>
@@ -116,21 +146,26 @@ export default () => {
               name="name"
               label="Name"
               ref={register({ required: true })}
-              error={errors.name && 'Your name is required'}
+              error={errors.name && "Your name is required"}
             />
             <Input
               name="email"
               label="Email"
               ref={register({ required: true })}
-              error={errors.email && 'Please enter a valid email address'}
+              error={errors.email && "Please enter a valid email address"}
             />
             <Input
               name="companyName"
               label="Company"
               ref={register({ required: true })}
-              error={errors.companyName && 'Your company name is required'}
+              error={errors.companyName && "Your company name is required"}
             />
-            <Input name="website" label="Company Website" ref={register} error={errors.website} />
+            <Input
+              name="website"
+              label="Company Website"
+              ref={register}
+              error={errors.website}
+            />
           </Form>
         </div>
 

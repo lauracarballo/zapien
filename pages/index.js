@@ -7,6 +7,7 @@ import DescriptionSection from "../components/DescriptionSection";
 import MarketingSection from "../components/MarketingSection";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
+import StyledLink from "../components/StyledLink";
 
 export default () => (
   <>
@@ -66,7 +67,7 @@ export default () => (
         Work with influencers and content creators that share the same values as
         your brand.
       </p>
-      <Button href="/brands">I'm a Brand</Button>
+      <StyledLink href="/brands">I'm a Brand</StyledLink>
     </MarketingSection>
 
     <MarketingSection
@@ -80,7 +81,7 @@ export default () => (
         Zapien is a community that incentives influencers and content creators
         to create content that empowers positive change.
       </p>
-      <Button href="/creators">I'm a Conscious Creators</Button>
+      <StyledLink href="/creators">I'm a Conscious Creator</StyledLink>
     </MarketingSection>
     <Footer />
     <style jsx>{`

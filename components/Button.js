@@ -13,18 +13,52 @@ const Button = ({ type = "button", href, children, ...props }) => (
         {children}
       </button>
     )}
+
     <style jsx>{`
       .button {
-        background-color: white;
-        color: #036200;
-        padding: 5px 35px;
-        border-radius: 4px;
-        border: 2px solid #036200;
+        position: relative;
+        background-color: #2d6f2b;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 15px 40px;
+        border-radius: 1px;
+        border: none;
+        overflow: hidden;
+        transition: all 0.3s;
+        z-index: 1;
       }
 
       .button:hover {
-        background-color: #036200;
+        color: #fff;
+      }
+
+      .button:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: #3b8739;
         color: white;
+        transition: all 0.5s;
+        z-index: -1;
+      }
+
+      .button:hover:before {
+        width: 100%;
+      }
+
+      .button:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #2d6f2b;
+        color: #fff;
+        z-index: -2;
       }
     `}</style>
   </>

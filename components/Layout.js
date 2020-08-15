@@ -7,7 +7,6 @@ function Layout(props) {
           box-sizing: border-box;
           font-weight: 400;
           font-size: 15px;
-          scroll-behavior: smooth;
         }
 
         *,
@@ -33,14 +32,14 @@ function Layout(props) {
 
         h2 {
           font-weight: 700;
-          font-size: 38px;
+          font-size: 35px;
           padding-bottom: 15px;
           margin-top: 0px;
           line-height: 48px;
         }
 
         h3 {
-          font-size: 30px;
+          font-size: 25px;
           margin-top: 50px;
         }
 
@@ -51,7 +50,7 @@ function Layout(props) {
 
         p {
           line-height: 28px;
-          font-size: 18px;
+          font-size: 16px;
         }
 
         a:hover:not(.logo) {
@@ -80,7 +79,7 @@ function Layout(props) {
           position: absolute;
           bottom: -15px;
           left: 0;
-          max-width: 150px;
+          max-width: 250px;
         }
 
         .center {
