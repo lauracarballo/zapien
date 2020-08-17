@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "next",
-    "build": "npm run introspect && npx next build",
+    "prebuild": "prisma generate",
+    "build": "next build",
     "start": "next start",
     "migrate": "prisma migrate save --experimental",
     "introspect": "prisma introspect && prisma generate"
