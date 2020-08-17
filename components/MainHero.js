@@ -12,7 +12,9 @@ const MainHero = ({ title, description, image }) => {
               <Button href="/brands" style={{ marginRight: 25 }}>
                 I'M A BRAND
               </Button>
-              <Button href="/creators">I'M A CREATOR</Button>
+              <Button secondaryButton href="/creators">
+                I'M A CREATOR
+              </Button>
             </div>
           </div>
           <div className="image-wrapper">

@@ -13,17 +13,15 @@ const Hero = ({ title, description, backgroundImage }) => {
           align-items: center;
           justify-content: ${backgroundImage ? "flex-start" : "center"};
           width: 100%;
-          height: 50vh;
-          min-height: 350px;
+          height: ${backgroundImage ? "50vh" : "30vh"};
+          min-height: ${backgroundImage ? "350px" : "250px"};
           margin: 25px 0;
-          ${
-            backgroundImage &&
-            `
+          ${backgroundImage &&
+          `
           background-image: url(${backgroundImage});
           background-repeat: no-repeat;
           background-position: right top;
-          background-size: 50%;`
-          }
+          background-size: 50%;`}
         }
 
         .hero-text {
@@ -36,14 +34,20 @@ const Hero = ({ title, description, backgroundImage }) => {
         .title {
           font-size: 40px;
           font-weight: 400;
+          width: 600px;
         }
 
         .description {
           font-size: 16px;
         }
-        @media screen and (max-width: 768px){
+        @media screen and (max-width: 768px) {
           .title {
-          font-size: 35px;
+            font-size: 35px;
+            width: 100%;
+          }
+          .hero {
+            background-image: none;
+          }
         }
       `}</style>
     </div>

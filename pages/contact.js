@@ -9,15 +9,16 @@ export default () => {
 
   return (
     <>
-      <Head title="Zapien" />
+      <Head title="Zapien - Contact" />
       <Nav />
       <section id="form-section" className="m50">
         <div className="form-intro container">
           <h2 className="title underline">Contact us</h2>
           <div className="content">
             <p>
-              We are happy to hear from you. <br></br> Fill out the form and
-              we’ll get in touch as soon as possible.
+              All feedback is welcome!
+              <br /> Fill out the form and we’ll get in touch as soon as
+              possible.
             </p>
           </div>
         </div>
@@ -31,6 +32,7 @@ export default () => {
             />
             <Input
               name="email"
+              type="email"
               label="Email"
               ref={register({ required: true })}
               error={errors.email && "Please enter a valid email address"}

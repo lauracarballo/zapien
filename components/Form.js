@@ -4,10 +4,12 @@ import { forwardRef } from "react";
 export const Input = forwardRef(
   ({ name, label, type = "text", error, ...props }, ref) => {
     return (
-      <div className="form-row">
-        <label htmlFor={name}>{label}</label>
-        <input id={name} name={name} type={type} ref={ref} {...props} />
-        {error}
+      <>
+        <div className="form-row">
+          <label htmlFor={name}>{label}</label>
+          <input id={name} name={name} type={type} ref={ref} {...props} />
+        </div>
+        {error && <div className="error">{error}</div>}
         <style jsx>{`
           .form-row {
             display: flex;
@@ -22,7 +24,7 @@ export const Input = forwardRef(
             flex: 35%;
           }
           .form-row > input {
-            background-color: #f6f9fc;
+            background-color: #eff1f9;
             font-size: 15px;
             color: grey;
             padding: 10px 20px;
@@ -32,6 +34,14 @@ export const Input = forwardRef(
             outline: none;
             width: auto;
             border-radius: 4px;
+            border: 1px solid;
+            border-color: ${error ? "#ca3c25" : "#ddd"};
+          }
+
+          .error {
+            text-align: right;
+            font-size: 12px;
+            color: #ca3c25;
           }
 
           @media screen and (max-width: 768px) {
@@ -43,7 +53,7 @@ export const Input = forwardRef(
             }
           }
         `}</style>
-      </div>
+      </>
     );
   }
 );
@@ -99,7 +109,9 @@ const Form = ({ onSubmit, children }) => {
       <fieldset>
         {children}
         <div className="form-row button">
-          <Button type="submit">Submit</Button>
+          <Button type="submit" style={{ width: "100%" }}>
+            Submit
+          </Button>
         </div>
       </fieldset>
       <style jsx>{`
@@ -117,6 +129,7 @@ const Form = ({ onSubmit, children }) => {
         .button {
           display: flex;
           justify-content: flex-end;
+          margin-top: 25px;
         }
       `}</style>
     </form>

@@ -37,38 +37,34 @@ export default () => {
       <Hero
         title={
           <>
-            <div>Get ready to launch your next</div>
-            <div>campaign with us</div>
+            <div>Connect with</div>
+            <div>Conscious Influencers</div>
           </>
         }
         description={
-          <StyledLink
-            className="center"
-            href="#contact"
-            onClick={(event) => {
-              event.preventDefault();
-              const formSection = document.getElementById("contact");
-              const location = formSection.getBoundingClientRect();
-              scrollTo({
-                top: location.top,
-                left: 0,
-                behavior: "smooth",
-              });
-            }}
-          >
-            <div>Get started</div>
-          </StyledLink>
+          <div className="center">
+            <StyledLink
+              href="#contact"
+              onClick={(event) => {
+                event.preventDefault();
+                const formSection = document.getElementById("contact");
+                const location = formSection.getBoundingClientRect();
+                scrollTo({
+                  top: location.top,
+                  left: 0,
+                  behavior: "smooth",
+                });
+              }}
+            >
+              Get started
+            </StyledLink>
+          </div>
         }
       ></Hero>
 
       <DescriptionSection
-        title="GROW WITH US"
-        intro={
-          <>
-            <div>Connect with</div>
-            <div>Conscious Creators </div>
-          </>
-        }
+        title="MAKE A DIFFERENCE"
+        intro="Launch your next campaign with us"
         description={
           <>
             <div>We will help you target conscious consumers and</div>
@@ -86,11 +82,9 @@ export default () => {
       >
         <h2 className="underline">01. Prepare your campaign</h2>
         <p>
-          Create your briefing and share it into your profile. <br></br>
-          We created a staging area in which our team will review the details of
-          your campaign to make sure it aligns with our core values. Once you've
-          been successfully reviewed, we'll share your briefing with all
-          conscious influencers.
+          Create a briefing for our conscious influencers and content creators.
+          Our team will review the details of your briefing, once it's been
+          approved, we'll share your campaign on the platform.
         </p>
       </MarketingSection>
       <MarketingSection
@@ -113,22 +107,23 @@ export default () => {
       >
         <h2 className="underline">03. Start your campaign</h2>
         <p>
-          Contact conscious influencers and content creators who you want to
-          work with and send them all the required details for a successful
-          campaign.
+          Review the applications and choose the people you want to work. Gather
+          all the required details for launching your campaign and we'll help
+          you kick it off.
         </p>
       </MarketingSection>
-      {/* <MarketingSection
+      <MarketingSection
         backImage="/images/analytics.jpeg"
         frontImage="/images/analytics2.jpeg"
       >
-        <h2 className="underline">Track your campaign</h2>
+        <h2 className="underline">04. Track your campaign</h2>
         <p>
-          Our technology will give you access to all the data necessary to track your campaign. All
-          the content gets reviewed through our dashboard so your brand can analyse the overall
-          sentiment of the campaign.
+          Our technology will give you access to all the data necessary to track
+          your campaign. All the content gets reviewed through our dashboard so
+          your brand can analyse the overall sentiment and success of the
+          campaign.
         </p>
-      </MarketingSection> */}
+      </MarketingSection>
       <section id="contact" className="form-section">
         <div className="form-intro container">
           <h2 className="title underline">Get to know us!</h2>
@@ -150,6 +145,7 @@ export default () => {
             />
             <Input
               name="email"
+              type="email"
               label="Email"
               ref={register({ required: true })}
               error={errors.email && "Please enter a valid email address"}

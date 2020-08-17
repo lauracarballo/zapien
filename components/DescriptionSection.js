@@ -28,8 +28,16 @@ const DescriptionSection = ({ title, intro, description }) => {
         }
 
         .styling-intro {
+          margin: auto;
           margin-top: 25px;
           margin-bottom: auto;
+          width: 500px;
+        }
+
+        @media screen and (max-width: 768px) {
+          .styling-intro {
+            width: 100%;
+          }
         }
       `}</style>
     </div>

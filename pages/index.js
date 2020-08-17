@@ -5,13 +5,12 @@ import Nav from "../components/Nav";
 import MainHero from "../components/MainHero";
 import DescriptionSection from "../components/DescriptionSection";
 import MarketingSection from "../components/MarketingSection";
-import Button from "../components/Button";
 import Footer from "../components/Footer";
 import StyledLink from "../components/StyledLink";
 
 export default () => (
   <>
-    <Head title="Zapien" />
+    <Head title="Zapien - Connecting ethical brands with conscious influencers" />
     <Nav />
     <MainHero
       title={
@@ -74,9 +73,7 @@ export default () => (
       backImage="/images/blogger.jpeg"
       frontImage="/images/blogger2.jpeg"
     >
-      <h2 className="underline">
-        Promote Sustainability and Ethical Lifestyle
-      </h2>
+      <h2 className="underline">Promote a Sustainable and Ethical Lifestyle</h2>
       <p>
         Zapien is a community that incentives influencers and content creators
         to create content that empowers positive change.

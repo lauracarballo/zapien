@@ -48,20 +48,21 @@ export default () => (
       frontImage="/images/smile.jpeg"
       reverse
     >
-      <h2 className="underline"> 01. Sign up with us</h2>
+      <h2 className="underline"> 01. Sign up</h2>
       <p>
         Follower counts or number of likes is not a filter for us.
         <br />
         Our main concern is building a community of conscious influencers and
         content creators that empower positive change with their daily content.
       </p>
+      <StyledLink href="/sign-up">Sign me up</StyledLink>
     </MarketingSection>
 
     <MarketingSection
       backImage="/images/think-outside-the-box.jpeg"
       frontImage="/images/instagram.jpeg"
     >
-      <h2 className="underline">02. Apply</h2>
+      <h2 className="underline">02. Connect with Brands</h2>
       <p>
         Through your personalized profile you'll be able to view and connect
         with ethical and sustainable brands that care for the planet as much as
@@ -91,6 +92,7 @@ export default () => (
         issues. When that power is used wisely it can help promote products with
         a positive impact on the planet.
       </p>
+      <StyledLink href="/sign-up">Let's get started</StyledLink>
     </MarketingSection>
     <Footer />
     <style jsx>{`

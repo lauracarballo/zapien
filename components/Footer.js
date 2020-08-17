@@ -62,7 +62,7 @@ const Footer = () => {
       <style jsx>{`
         footer {
           margin-top: 20px;
-          padding: 120px 0px;
+          padding: 50px 0px;
           background-color: #f8f8f8;
           color: #333;
         }

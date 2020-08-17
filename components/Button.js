@@ -1,26 +1,39 @@
 import Link from "next/link";
 
-const Button = ({ type = "button", href, children, ...props }) => (
+const Button = ({
+  secondaryButton,
+  type = "button",
+  href,
+  children,
+  ...props
+}) => (
   <>
     {href ? (
       <Link href={href}>
-        <a className="button" {...props}>
+        <a
+          className={secondaryButton ? "secondary__button" : "primary__button"}
+          {...props}
+        >
           {children}
         </a>
       </Link>
     ) : (
-      <button type={type} className="button" {...props}>
+      <button
+        type={type}
+        className={secondaryButton ? "secondary__button" : "primary__button"}
+        {...props}
+      >
         {children}
       </button>
     )}
 
     <style jsx>{`
-      .button {
+      .primary__button {
         position: relative;
         background-color: #2d6f2b;
         color: #fff;
         text-transform: uppercase;
-        padding: 15px 40px;
+        padding: 12px 35px;
         border-radius: 1px;
         border: none;
         overflow: hidden;
@@ -28,11 +41,11 @@ const Button = ({ type = "button", href, children, ...props }) => (
         z-index: 1;
       }
 
-      .button:hover {
+      .primary__button:hover {
         color: #fff;
       }
 
-      .button:before {
+      .primary__button:before {
         content: "";
         position: absolute;
         bottom: 0;
@@ -45,11 +58,11 @@ const Button = ({ type = "button", href, children, ...props }) => (
         z-index: -1;
       }
 
-      .button:hover:before {
+      .primary__button:hover:before {
         width: 100%;
       }
 
-      .button:after {
+      .primary__button:after {
         content: "";
         position: absolute;
         bottom: 0;
@@ -59,6 +72,63 @@ const Button = ({ type = "button", href, children, ...props }) => (
         background-color: #2d6f2b;
         color: #fff;
         z-index: -2;
+      }
+
+      .secondary__button {
+        position: relative;
+        background-color: rgba(192, 222, 192, 1);
+        color: #2d6f2b;
+        text-transform: uppercase;
+        padding: 10px 33px;
+        border-radius: 1px;
+        border: 2px solid #2d6f2b;
+        overflow: hidden;
+        transition: all 0.3s;
+        z-index: 1;
+      }
+
+      .secondary__button:hover {
+        color: #3b8739;
+      }
+
+      .secondary__button:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: #3b8739;
+        color: white;
+        transition: all 0.5s;
+        z-index: -1;
+      }
+
+      .secondary__button:hover:before {
+        width: 100%;
+      }
+
+      .secondary__button:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(192, 222, 192, 1);
+        color: #2d6f2b;
+        z-index: -2;
+      }
+      @media screen and (max-width: 768px) {
+        .primary__button {
+          font-size: 12px;
+          padding: 12px 18px;
+        }
+        .secondary__button {
+          font-size: 12px;
+          padding: 10px 12px;
+          background-color: #fff;
+        }
       }
     `}</style>
   </>

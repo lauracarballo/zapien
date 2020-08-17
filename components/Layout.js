@@ -69,6 +69,7 @@ function Layout(props) {
 
         .underline {
           position: relative;
+          padding-bottom: 0;
         }
 
         .underline:after {
