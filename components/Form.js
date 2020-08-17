@@ -60,10 +60,12 @@ export const Input = forwardRef(
 
 export const TextArea = forwardRef(({ name, label, error }, ref) => {
   return (
-    <div className="form-row">
-      <label htmlFor={name}>{label}</label>
-      <textarea id={name} name={name} rows="4" ref={ref} />
-      {error}
+    <>
+      <div className="form-row">
+        <label htmlFor={name}>{label}</label>
+        <textarea id={name} name={name} rows="4" ref={ref} />
+      </div>
+      {error && <div className="error">{error}</div>}
       <style jsx>{`
         .form-row {
           display: flex;
@@ -77,8 +79,7 @@ export const TextArea = forwardRef(({ name, label, error }, ref) => {
           flex: 35%;
         }
         .form-row > textarea {
-          background-color: #f6f9fc;
-          font-family: inherit;
+          background-color: #eff1f9;
           font-size: 15px;
           color: grey;
           padding: 10px 20px;
@@ -88,6 +89,14 @@ export const TextArea = forwardRef(({ name, label, error }, ref) => {
           outline: none;
           width: auto;
           border-radius: 4px;
+          border: 1px solid;
+          border-color: ${error ? "#ca3c25" : "#ddd"};
+        }
+
+        .error {
+          text-align: right;
+          font-size: 12px;
+          color: #ca3c25;
         }
 
         @media screen and (max-width: 768px) {
@@ -99,7 +108,7 @@ export const TextArea = forwardRef(({ name, label, error }, ref) => {
           }
         }
       `}</style>
-    </div>
+    </>
   );
 });
 
