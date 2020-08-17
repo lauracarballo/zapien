@@ -13,22 +13,6 @@ export default () => {
   const { register, errors, handleSubmit } = useForm();
   const [submitted, setSubmitted] = useState(false);
 
-  function handleFormSubmit(event) {
-    event.persist();
-    handleSubmit(async data => {
-      const request = await fetch("/api/form", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: "BRAND", ...data }),
-      });
-      const { submitted } = await request.json();
-      if (submitted) {
-        setSubmitted(true);
-        event.target.reset();
-      }
-    })(event);
-  }
-
   return (
     <>
       <Head title="Zapien" />
@@ -44,7 +28,7 @@ export default () => {
           <div className="center">
             <StyledLink
               href="#contact"
-              onClick={event => {
+              onClick={(event) => {
                 event.preventDefault();
                 const formSection = document.getElementById("contact");
                 const location = formSection.getBoundingClientRect();
@@ -134,7 +118,19 @@ export default () => {
           </div>
         </div>
         <div className="forms">
-          <Form onSubmit={handleFormSubmit}>
+          <Form
+            onSubmit={handleSubmit(async (data) => {
+              const request = await fetch("/api/form", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ type: "BRAND", ...data }),
+              });
+              const { submitted } = await request.json();
+              if (submitted) {
+                setSubmitted(true);
+              }
+            })}
+          >
             {submitted && "Thanks for contacting us, we'll be in touch soon."}
             <Input
               name="name"

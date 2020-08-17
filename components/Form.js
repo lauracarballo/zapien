@@ -1,5 +1,5 @@
 import Button from "./Button";
-import { forwardRef } from "react";
+import { forwardRef, useState } from "react";
 
 export const Input = forwardRef(
   ({ name, label, type = "text", error, ...props }, ref) => {
@@ -104,13 +104,28 @@ export const TextArea = forwardRef(({ name, label, error }, ref) => {
 });
 
 const Form = ({ onSubmit, children }) => {
+  const [loading, setLoading] = useState(false);
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    setLoading(true);
+    event.persist();
+    try {
+      await onSubmit(event);
+      event.target.reset();
+      setLoading(false);
+    } catch (err) {
+      setLoading(false);
+    }
+  }
+
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={handleSubmit}>
       <fieldset>
         {children}
         <div className="form-row button">
-          <Button type="submit" style={{ width: "100%" }}>
-            Submit
+          <Button disabled={loading} type="submit" style={{ width: "100%" }}>
+            {loading ? "Loading..." : "Submit"}
           </Button>
         </div>
       </fieldset>

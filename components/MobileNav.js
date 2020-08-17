@@ -14,7 +14,7 @@ const Burger = ({ open, setOpen }) => {
           justify-content: space-around;
           width: 2rem;
           height: 2rem;
-          background: ${open ? "rgba(192, 222, 192, 1)" : "#fff"};
+          background: ${open ? "rgba(192, 222, 192, 1)" : "transparent"};
           border: none;
           cursor: pointer;
           padding: 0;

@@ -1,17 +1,11 @@
 import Link from "next/link";
 
-const Button = ({
-  secondaryButton,
-  type = "button",
-  href,
-  children,
-  ...props
-}) => (
+const Button = ({ secondary, type = "button", href, children, ...props }) => (
   <>
     {href ? (
       <Link href={href}>
         <a
-          className={secondaryButton ? "secondary__button" : "primary__button"}
+          className={secondary ? "secondary__button" : "primary__button"}
           {...props}
         >
           {children}
@@ -20,7 +14,7 @@ const Button = ({
     ) : (
       <button
         type={type}
-        className={secondaryButton ? "secondary__button" : "primary__button"}
+        className={secondary ? "secondary__button" : "primary__button"}
         {...props}
       >
         {children}
@@ -29,6 +23,7 @@ const Button = ({
 
     <style jsx>{`
       .primary__button {
+        display: inline-block;
         position: relative;
         background-color: #2d6f2b;
         color: #fff;
@@ -75,8 +70,9 @@ const Button = ({
       }
 
       .secondary__button {
+        display: inline-block;
         position: relative;
-        background-color: rgba(192, 222, 192, 1);
+        background-color: transparent;
         color: #2d6f2b;
         text-transform: uppercase;
         padding: 10px 33px;
@@ -88,7 +84,7 @@ const Button = ({
       }
 
       .secondary__button:hover {
-        color: #3b8739;
+        color: #2d6f2b;
       }
 
       .secondary__button:before {
@@ -98,8 +94,7 @@ const Button = ({
         left: 0;
         width: 0%;
         height: 100%;
-        background-color: #3b8739;
-        color: white;
+        background-color: rgba(59, 135, 57, 0.2);
         transition: all 0.5s;
         z-index: -1;
       }
@@ -115,8 +110,7 @@ const Button = ({
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(192, 222, 192, 1);
-        color: #2d6f2b;
+        background-color: transparent;
         z-index: -2;
       }
       @media screen and (max-width: 768px) {
@@ -127,7 +121,6 @@ const Button = ({
         .secondary__button {
           font-size: 12px;
           padding: 10px 12px;
-          background-color: #fff;
         }
       }
     `}</style>

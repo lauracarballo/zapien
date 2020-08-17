@@ -8,7 +8,6 @@ import { useState } from "react";
 const Nav = () => {
   const [open, setOpen] = useState(false);
   const { pathname } = useRouter();
-  console.log({ pathname });
   return (
     <div className="container">
       <nav>
@@ -33,7 +32,9 @@ const Nav = () => {
             </Link>
           </li>
           <li className="nav-link">
-            <Button href="/sign-up">Sign up</Button>
+            <Button secondary href="/sign-up">
+              Sign up
+            </Button>
           </li>
         </ul>
         <div className="mobile-menu">

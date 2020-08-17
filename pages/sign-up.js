@@ -12,22 +12,6 @@ export default () => {
   const { register, errors, handleSubmit } = useForm();
   const [submitted, setSubmitted] = useState(false);
 
-  function handleFormSubmit(event) {
-    event.persist();
-    handleSubmit(async data => {
-      const request = await fetch("/api/form", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type: "CREATOR", ...data }),
-      });
-      const { submitted } = await request.json();
-      if (submitted) {
-        setSubmitted(true);
-        event.target.reset();
-      }
-    })(event);
-  }
-
   return (
     <>
       <Head title="Zapien - Sign up as a Conscious Creator" />
@@ -74,7 +58,19 @@ export default () => {
               Thank you for your interest in Zapien, we'll be in touch soon!
             </div>
           ) : (
-            <Form onSubmit={handleFormSubmit}>
+            <Form
+              onSubmit={handleSubmit(async (data) => {
+                const request = await fetch("/api/form", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify({ type: "CREATOR", ...data }),
+                });
+                const { submitted } = await request.json();
+                if (submitted) {
+                  setSubmitted(true);
+                }
+              })}
+            >
               <Input
                 name="name"
                 label="Name"
@@ -127,6 +123,24 @@ export default () => {
         .center {
           text-align: center;
         }
+        @media screen and (max-width: 768px) {
+          .form-section {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            grid-template-rows: 25% 70%;
+          }
+          .form-intro {
+            grid-column: 1 / 3;
+            grid-row: 1;
+            width: 80%;
+            padding: 0;
+          }
+          .forms {
+            grid-column: 1 / 3;
+            grid-row: 2;
+            width: 100%;
+            padding: 5vw;
+          }
       `}</style>
     </>
   );
