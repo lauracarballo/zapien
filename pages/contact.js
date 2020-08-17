@@ -7,6 +7,21 @@ import { useForm } from "react-hook-form";
 export default () => {
   const { register, errors, handleSubmit } = useForm();
 
+  function handleFormSubmit(event) {
+    event.persist();
+    handleSubmit(async data => {
+      const request = await fetch("/api/form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const { submitted } = await request.json();
+      if (submitted) {
+        event.target.reset();
+      }
+    })(event);
+  }
+
   return (
     <>
       <Head title="Zapien - Contact" />
@@ -23,7 +38,7 @@ export default () => {
           </div>
         </div>
         <div className="forms">
-          <Form onSubmit={handleSubmit((data) => console.log(data))}>
+          <Form onSubmit={handleFormSubmit}>
             <Input
               name="name"
               label="Name"

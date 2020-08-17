@@ -15,8 +15,7 @@ export default () => {
 
   function handleFormSubmit(event) {
     event.persist();
-    handleSubmit(async (data) => {
-      console.log(data);
+    handleSubmit(async data => {
       const request = await fetch("/api/form", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -45,7 +44,7 @@ export default () => {
           <div className="center">
             <StyledLink
               href="#contact"
-              onClick={(event) => {
+              onClick={event => {
                 event.preventDefault();
                 const formSection = document.getElementById("contact");
                 const location = formSection.getBoundingClientRect();

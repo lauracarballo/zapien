@@ -7,7 +7,6 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import DescriptionSection from "../components/DescriptionSection";
 import Form, { Input } from "../components/Form";
-import StyledLink from "../components/StyledLink";
 
 export default () => {
   const { register, errors, handleSubmit } = useForm();
@@ -15,8 +14,7 @@ export default () => {
 
   function handleFormSubmit(event) {
     event.persist();
-    handleSubmit(async (data) => {
-      console.log(data);
+    handleSubmit(async data => {
       const request = await fetch("/api/form", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -91,11 +89,11 @@ export default () => {
                 error={errors.email && "Please enter a valid email address"}
               />
               <Input
-                name="instagram-name"
+                name="website"
                 label="Instagram"
                 ref={register({ required: true })}
                 placeholder="@username"
-                error={errors.email && "Tell us your Instagram name"}
+                error={errors.website && "Tell us your Instagram name"}
               />
             </Form>
           )}
