@@ -22,7 +22,6 @@ export default () => (
               {[
                 "Sustainability",
                 "EthicalBrands",
-                "ClimateChange",
                 "FairTrade",
                 "HumanRights",
               ].map((text) => (
