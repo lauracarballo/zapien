@@ -1,4 +1,4 @@
-import Button from "../components/Button";
+import Button from '../components/Button';
 
 const MainHero = ({ title, description, image }) => {
   return (
@@ -28,6 +28,7 @@ const MainHero = ({ title, description, image }) => {
               padding: 90px 0;
               height: 80vh;
               min-height: 600px;
+              max-height: 750px;
             }
 
             .button {
@@ -37,13 +38,14 @@ const MainHero = ({ title, description, image }) => {
             .hero-text {
               position: relative;
               left: 0;
-              top: 5vw;
+              top: 50%;
               width: 50%;
-              height: 365px;
+              height: auto;
               padding: 25px 25px;
               color: #023a00;
               background-color: rgba(192, 222, 192, 1);
               box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+              transform: translateY(-50%);
               z-index: 1;
             }
 
@@ -54,10 +56,11 @@ const MainHero = ({ title, description, image }) => {
             }
 
             .image-wrapper {
-              width: 60%;
               position: absolute;
               right: 0;
-              top: 8%;
+              top: 50%;
+              width: 60%;
+              transform: translateY(-50%);
             }
 
             .img-style {
