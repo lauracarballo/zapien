@@ -14,6 +14,7 @@ model Application {
   status     Status   @default(PENDING)
   Campaign   Campaign @relation(fields: [campaignId], references: [id])
   Creator    Creator  @relation(fields: [creatorId], references: [id])
+  createdAt  DateTime @default(now())
 }
 
 model Brand {
@@ -54,13 +55,14 @@ model Category {
 }
 
 model Contact {
-  id          Int     @default(autoincrement()) @id
+  id          Int      @default(autoincrement()) @id
   name        String
   email       String
   type        Role?
   message     String?
   companyName String?
   website     String?
+  createdAt   DateTime @default(now())
 }
 
 model Creator {
