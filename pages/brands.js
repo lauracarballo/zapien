@@ -107,8 +107,8 @@ export default () => {
           campaign.
         </p>
       </MarketingSection>
-      <section id="contact" className="form-section">
-        <div className="form-intro container">
+      <section id="contact" className="form-section container">
+        <div className="form-intro">
           <h2 className="title underline">Get to know us!</h2>
           <div className="content">
             <p>
@@ -163,17 +163,16 @@ export default () => {
         <style jsx>{`
         .form-section {
           display: grid;
-          grid-template-columns: 40% 70%
+          grid-template-columns: 40% 60%;
         }
         .form-intro {
           grid-column: 1;
           width: 80%;
-          padding: 3vw;
         }
         .forms {
           grid-column: 2;
-          width: 83%;
-          padding: 5vw;
+          width: 95%;
+          
         }
         .title {
           text-align: left;
@@ -193,13 +192,12 @@ export default () => {
             grid-column: 1 / 3;
             grid-row: 1;
             width: 80%;
-            padding: 0;
           }
           .forms {
             grid-column: 1 / 3;
             grid-row: 2;
             width: 100%;
-            padding: 5vw;
+            padding-top: 50px;
           }
         }
         

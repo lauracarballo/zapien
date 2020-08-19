@@ -1,4 +1,4 @@
-import Button from '../components/Button';
+import Button from "../components/Button";
 
 const MainHero = ({ title, description, image }) => {
   return (
@@ -59,7 +59,7 @@ const MainHero = ({ title, description, image }) => {
               position: absolute;
               right: 0;
               top: 50%;
-              width: 60%;
+              width: 55%;
               transform: translateY(-50%);
             }
 

@@ -99,8 +99,8 @@ function Layout(props) {
           max-width: 1200px;
           width: 100%;
           margin: 0 auto;
-          padding-right: 55px;
-          padding-left: 55px;
+          padding-right: 20px;
+          padding-left: 20px;
         }
 
         .legal > p {

@@ -11,8 +11,8 @@ export default () => {
     <>
       <Head title="Zapien - Contact" />
       <Nav />
-      <section id="form-section" className="m50">
-        <div className="form-intro container">
+      <section id="form-section" className="container">
+        <div className="form-intro">
           <h2 className="title underline">Contact us</h2>
           <div className="content">
             <p>
@@ -57,17 +57,16 @@ export default () => {
         <style jsx>{`
         #form-section {
           display: grid;
-          grid-template-columns: 40% 70%;
+          grid-template-columns: 40% 60%;
+          margin-top: 50px;
         }
         .form-intro {
           grid-column: 1;
           width: 80%;
-          padding: 3vw;
         }
         .forms {
           grid-column: 2;
-          width: 83%;
-          padding: 5vw;
+          width: 100%; 
         }
         .title {
           text-align: left;
@@ -87,13 +86,12 @@ export default () => {
             grid-column: 1 / 3;
             grid-row: 1;
             width: 80%;
-            padding: 0;
           }
           .forms {
             grid-column: 1 / 3;
             grid-row: 2;
             width: 100%;
-            padding: 5vw;
+            padding-top: 25px;
           }
         }
         

@@ -10,6 +10,9 @@ const MenuBar = ({ open }) => {
       <a className="mobile-link" href="/creators">
         Conscious Creators
       </a>
+      <a className="mobile-link" href="/contact">
+        Contact
+      </a>
       <style jsx>{`
         .menu {
           display: flex;

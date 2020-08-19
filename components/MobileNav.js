@@ -4,6 +4,7 @@ const Burger = ({ open, setOpen }) => {
       <div className="button-styling"></div>
       <div className="button-styling"></div>
       <div className="button-styling"></div>
+      <div className="button-styling"></div>
       <style jsx>{`
         .mobile-button {
           position: fixed;

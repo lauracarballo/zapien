@@ -37,7 +37,7 @@ export default () => (
         </div>
       }
       description="A network that connects ethical and sustainable brands with conscious influencers and creators. "
-      image="/images/collage.jpg"
+      image="/images/collage-mainHero.jpg"
     />
     <DescriptionSection
       title="OUR MISSION"
