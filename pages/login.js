@@ -10,15 +10,18 @@ export default () => {
         <div className="login__content">
           <h1 className="login__content__title">Zapien</h1>
           <h2 className="login__content__undertitle">Login</h2>
-          <p>Brands and creators can log in here</p>
+          <p>Brands and creators login with your email here</p>
           <Input
+            style={{ marginBottom: "10px" }}
             name="email"
             type="email"
-            label="Email"
+            placeholder="zapien@email.com"
             ref={register({ required: true })}
             error={errors.email && "Please enter a valid email address"}
           />
-          <Button type="submit">Login</Button>
+          <Button type="submit" style={{ width: "100%" }}>
+            Login
+          </Button>
         </div>
       </div>
       <style jsx>{`
@@ -29,7 +32,7 @@ export default () => {
         }
 
         .page-login:before {
-          background-color: rgba(0, 0, 0, 0.3);
+          background-color: rgba(255, 255, 255, 0.1);
           position: absolute;
           height: 100vh;
           width: 100%;
@@ -50,10 +53,17 @@ export default () => {
           text-align: center;
           padding: 50px;
           border-radius: 5px;
+          box-shadow: 0px 0px 2px 3px #e4e4e4;
         }
 
         .login__content__title {
           color: #036100;
+          margin-block-start: 0px;
+          font-size: 50px;
+        }
+
+        .login__content__undertitle {
+          margin-block-end: 10px;
         }
       `}</style>
     </div>

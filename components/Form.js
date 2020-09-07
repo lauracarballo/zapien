@@ -6,7 +6,7 @@ export const Input = forwardRef(
     return (
       <>
         <div className="form-row">
-          <label htmlFor={name}>{label}</label>
+          {label && <label htmlFor={name}>{label}</label>}
           <input id={name} name={name} type={type} ref={ref} {...props} />
         </div>
         {error && <div className="error">{error}</div>}

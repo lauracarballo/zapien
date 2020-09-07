@@ -5,9 +5,50 @@ import Burger from "./MobileNav";
 import MenuBar from "./MenuBar";
 import { useState } from "react";
 
+const NavLinks = ({ links }) => {
+  const { pathname } = useRouter();
+
+  return (
+    <>
+      {links.map((link) => {
+        return (
+          <li className="nav-link">
+            <Link href={link.href}>
+              <a className={pathname == link.href ? "nav-active" : ""}>
+                {link.name}
+              </a>
+            </Link>
+          </li>
+        );
+      })}
+      <style jsx>{`
+        .nav-link {
+          display: flex;
+          padding-left: 50px;
+        }
+        .nav-active {
+          position: relative;
+          padding-bottom: 0;
+        }
+
+        .nav-active:after {
+          content: "";
+          width: 100%;
+          height: 3px;
+          background: #8cbf8a;
+          position: absolute;
+          bottom: -8px;
+          left: 0;
+          max-width: 250px;
+        }
+      `}</style>
+    </>
+  );
+};
+
 const Nav = () => {
   const [open, setOpen] = useState(false);
-  const { pathname } = useRouter();
+
   return (
     <div className="container">
       <nav>
@@ -17,20 +58,18 @@ const Nav = () => {
           </Link>
         </div>
         <ul className="nav-primary">
-          <li className="nav-link">
-            <Link href="/brands">
-              <a className={pathname == "/brands" ? "nav-active" : ""}>
-                Brands
-              </a>
-            </Link>
-          </li>
-          <li className="nav-link">
-            <Link href="/creators">
-              <a className={pathname == "/creators" ? "nav-active" : ""}>
-                Conscious Creators
-              </a>
-            </Link>
-          </li>
+          <NavLinks
+            links={[
+              {
+                name: "Brands",
+                href: "/brands",
+              },
+              {
+                name: "Conscious Creators",
+                href: "/creators",
+              },
+            ]}
+          />
           <li className="nav-link">
             <Button secondary href="/sign-up">
               Sign up
@@ -49,33 +88,17 @@ const Nav = () => {
             margin-top: 10px;
           }
 
+          .nav-link {
+            display: flex;
+            padding-left: 50px;
+          }
+
           .nav-primary {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin: 10px 0px;
             font-size: 15px;
-          }
-
-          .nav-link {
-            display: flex;
-            padding-left: 50px;
-          }
-
-          .nav-active {
-            position: relative;
-            padding-bottom: 0;
-          }
-
-          .nav-active:after {
-            content: "";
-            width: 100%;
-            height: 3px;
-            background: #8cbf8a;
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            max-width: 250px;
           }
 
           .mobile-menu {
