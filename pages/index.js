@@ -7,11 +7,13 @@ import DescriptionSection from "../components/DescriptionSection";
 import MarketingSection from "../components/MarketingSection";
 import Footer from "../components/Footer";
 import StyledLink from "../components/StyledLink";
+import { useSession } from "next-auth/client";
 
 export default () => (
   <>
     <Head title="Zapien - Connecting ethical brands with conscious influencers" />
     <Nav />
+    {console.log(useSession()[0])}
     <MainHero
       title={
         <div className="set-height">
