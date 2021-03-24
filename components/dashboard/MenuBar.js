@@ -4,10 +4,10 @@ const MenuBar = ({ menubarRef }) => {
       <section ref={menubarRef} className="menubar">
         <p>Signed in as Laura </p>
         <div className="dropdown__menu dropdown__menu-services">
-          <a className="menu-link" href="/">
+          <a className="menu-link" href="/creators/profile">
             Your Profile
           </a>
-          <a className="menu-link" href="/">
+          <a className="menu-link" href="/creators/campaigns">
             Your Campaigns
           </a>
         </div>

@@ -6,6 +6,7 @@ import Campaigns from "../../components/dashboard/Campaigns";
 import InlineEdit from "../../components/dashboard/InlineEdit";
 import TextAreaEdit from "../../components/dashboard/TextAreaEdit";
 import Selector from "../../components/dashboard/Selector";
+import ScrollRow from "../../components/dashboard/ScrollRow";
 
 const user = {
   id: 1,
@@ -44,7 +45,33 @@ const user = {
           status: "ACCEPTED",
           Brand: {
             id: 95324,
-            name: "COCOCO Life",
+            name: "Green Life",
+            description:
+              "COCOCO - Sustainable living 🌿 Sustainability & Zero Waste Blog 🤤 Vegan Recipes",
+            logoUrl:
+              "https://instagram.fsyd6-1.fna.fbcdn.net/v/t51.2885-19/s150x150/71174853_1235414673326679_1455648340275363840_n.jpg?_nc_ht=instagram.fsyd6-1.fna.fbcdn.net&_nc_ohc=YHJ4MuJ8imQAX84PSbY&oh=2f81134ad420eb8a54a356145d5d8d8e&oe=5F71A1C2",
+          },
+          Category: {
+            name: "Health & Wellbeing",
+          },
+        },
+      },
+      {
+        id: 24320,
+        status: "ACCEPTED",
+        Campaign: {
+          id: 124234,
+          title: "Sustainable Summer",
+          imageUrl:
+            "https://instagram.fsyd6-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/75231099_126848368398615_7659284112876110944_n.jpg?_nc_ht=instagram.fsyd6-1.fna.fbcdn.net&_nc_cat=103&_nc_ohc=GVhKe0DK4rUAX85W08D&oh=a054526545b271033a175340e0d4a19f&oe=5F72AA7D",
+          startDate: "2020-10-01T07:30:00.000Z",
+          endDate: "2020-10-10T07:30:00.000Z",
+          brief:
+            "Take a picture with your favourite COCOCO product and upload it to Instagram before the end of the campaign.",
+          status: "ACCEPTED",
+          Brand: {
+            id: 95324,
+            name: "Green Life",
             description:
               "COCOCO - Sustainable living 🌿 Sustainability & Zero Waste Blog 🤤 Vegan Recipes",
             logoUrl:
@@ -70,7 +97,59 @@ const user = {
           status: "ACCEPTED",
           Brand: {
             id: 95324,
-            name: "Allbirds",
+            name: "Sustainable Shoes",
+            description:
+              "At Allbirds, we make better things in a better way using premium natural materials.",
+            logoUrl:
+              "https://instagram.fsyd6-1.fna.fbcdn.net/v/t51.2885-19/s150x150/74606945_907553572979666_5337821699482058752_n.jpg?_nc_ht=instagram.fsyd6-1.fna.fbcdn.net&_nc_ohc=ZqkhdwTG2tQAX_v91Gn&oh=c03874a71929472e59f0630b41e4f0a3&oe=5F732E79",
+          },
+          Category: {
+            name: "Fashion",
+          },
+        },
+      },
+      {
+        id: 24311,
+        status: "ACCEPTED",
+        Campaign: {
+          id: 124234,
+          title: "Fresh Summer, Fresh Kicks",
+          imageUrl:
+            "https://instagram.fsyd6-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/117672789_804226356988284_7061901989645200226_n.jpg?_nc_ht=instagram.fsyd6-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=DEWlBNa-VWcAX-NTSsX&oh=13ec4bbbd2f426a373b0212f6c11c9a6&oe=5F72EA22",
+          startDate: "2020-11-01T07:30:00.000Z",
+          endDate: "2020-11-10T07:30:00.000Z",
+          brief:
+            "Send us an email at creators@allbirds.com with your shoe size and we'll send you some kicks, take a snap of them and upload it to Instagram before the end of the campaign.",
+          status: "ACCEPTED",
+          Brand: {
+            id: 95324,
+            name: "Sustainable Shoes",
+            description:
+              "At Allbirds, we make better things in a better way using premium natural materials.",
+            logoUrl:
+              "https://instagram.fsyd6-1.fna.fbcdn.net/v/t51.2885-19/s150x150/74606945_907553572979666_5337821699482058752_n.jpg?_nc_ht=instagram.fsyd6-1.fna.fbcdn.net&_nc_ohc=ZqkhdwTG2tQAX_v91Gn&oh=c03874a71929472e59f0630b41e4f0a3&oe=5F732E79",
+          },
+          Category: {
+            name: "Fashion",
+          },
+        },
+      },
+      {
+        id: 24311,
+        status: "ACCEPTED",
+        Campaign: {
+          id: 124234,
+          title: "Fresh Summer, Fresh Kicks",
+          imageUrl:
+            "https://instagram.fsyd6-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/p640x640/117672789_804226356988284_7061901989645200226_n.jpg?_nc_ht=instagram.fsyd6-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=DEWlBNa-VWcAX-NTSsX&oh=13ec4bbbd2f426a373b0212f6c11c9a6&oe=5F72EA22",
+          startDate: "2020-11-01T07:30:00.000Z",
+          endDate: "2020-11-10T07:30:00.000Z",
+          brief:
+            "Send us an email at creators@allbirds.com with your shoe size and we'll send you some kicks, take a snap of them and upload it to Instagram before the end of the campaign.",
+          status: "ACCEPTED",
+          Brand: {
+            id: 95324,
+            name: "Sustainable Shoes",
             description:
               "At Allbirds, we make better things in a better way using premium natural materials.",
             logoUrl:
@@ -96,7 +175,22 @@ export default () => {
   return (
     <>
       <Head />
-      <Nav />
+      <Nav
+        links={[
+          {
+            name: "Dashboard",
+            href: "/creators/dashboard",
+          },
+          {
+            name: "Profile",
+            href: "/creators/profile",
+          },
+          {
+            name: "Campaigns",
+            href: "/creators/campaigns",
+          },
+        ]}
+      />
       <div className="container">
         <div className="intro">
           <div className="intro__content">
@@ -169,7 +263,7 @@ export default () => {
         </div>
 
         <h3 className="underline">Campaigns</h3>
-        <div className="campaings-row">
+        <ScrollRow>
           {user.Creator.Application.filter(
             (application) => application.status == "ACCEPTED"
           ).map((application) => (
@@ -182,7 +276,7 @@ export default () => {
               ).toLocaleString()}
             />
           ))}
-        </div>
+        </ScrollRow>
 
         <style jsx>{`
           .profile__info {
@@ -235,10 +329,27 @@ export default () => {
           .intro__instagram__stats-number {
             margin-block-end: 0px;
           }
-          .campaings-row {
+          .campaigns-section {
+            display: block;
+            position: relative;
+          }
+          .campaigns-row {
             display: flex;
             justify-content: left;
             height: fit-content;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+          }
+          .scroll__arrow-left {
+            position: absolute;
+            top: 250px;
+            font-size: 25px;
+          }
+          .scroll__arrow-right {
+            position: absolute;
+            top: 250px;
+            right: 0px;
+            font-size: 25px;
           }
         `}</style>
       </div>

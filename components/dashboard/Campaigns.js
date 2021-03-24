@@ -12,7 +12,8 @@ const Campaigns = ({ img, title, brandName, endOfCampaign }) => {
       <style jsx>{`
         .campaign-card {
           display: block;
-          width: 350px;
+          min-width: 300px;
+          max-width: 350px;
           margin: 50px 5px;
           background-color: #f3f3f3;
         }

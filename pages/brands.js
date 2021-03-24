@@ -13,6 +13,18 @@ export default () => {
   const { register, errors, handleSubmit } = useForm();
   const [submitted, setSubmitted] = useState(false);
 
+  async function submit(data) {
+    const request = await fetch("/api/form", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ type: "BRAND", ...data }),
+    });
+    const { submitted } = await request.json();
+    if (submitted) {
+      setSubmitted(true);
+    }
+  }
+
   return (
     <>
       <Head title="Zapien" />
@@ -118,19 +130,7 @@ export default () => {
           </div>
         </div>
         <div className="forms">
-          <Form
-            onSubmit={handleSubmit(async (data) => {
-              const request = await fetch("/api/form", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ type: "BRAND", ...data }),
-              });
-              const { submitted } = await request.json();
-              if (submitted) {
-                setSubmitted(true);
-              }
-            })}
-          >
+          <Form onSubmit={handleSubmit(submit)}>
             {submitted && "Thanks for contacting us, we'll be in touch soon."}
             <Input
               name="name"

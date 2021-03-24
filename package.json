@@ -16,13 +16,15 @@
   "license": "ISC",
   "dependencies": {
     "@prisma/client": "^2.4.1",
+    "axios": "^0.21.1",
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-hook-form": "^6.0.0",
     "react-select": "^3.1.0",
     "react-typist": "^2.0.5",
-    "react-typist-loop": "0.0.5"
+    "react-typist-loop": "0.0.5",
+    "swr": "^0.5.4"
   },
   "devDependencies": {
     "@prisma/cli": "^2.4.1"

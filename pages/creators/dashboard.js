@@ -81,7 +81,22 @@ export default () => {
   return (
     <>
       <Head />
-      <Nav />
+      <Nav
+        links={[
+          {
+            name: "Dashboard",
+            href: "/creators/dashboard",
+          },
+          {
+            name: "Profile",
+            href: "/creators/profile",
+          },
+          {
+            name: "Campaigns",
+            href: "/creators/campaigns",
+          },
+        ]}
+      />
       <div className="container">
         <div className="intro">
           <img className="intro__img" src={user.Creator.imageUrl} alt="" />
@@ -93,6 +108,7 @@ export default () => {
             {user.Creator.instagramId}
           </Button>
         </div>
+
         <h3 className="underline">Upcoming Campaigns</h3>
         <div className="campaings-row">
           {user.Creator.Application.filter(

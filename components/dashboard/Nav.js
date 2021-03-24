@@ -4,7 +4,7 @@ import Menu from "../dashboard/Menu";
 import MenuBar from "../dashboard/MenuBar";
 import { useState, useEffect, useRef } from "react";
 
-const NavLinks = ({ links }) => {
+export const NavLinks = ({ links }) => {
   const { pathname } = useRouter();
   return (
     <>
@@ -44,7 +44,7 @@ const NavLinks = ({ links }) => {
   );
 };
 
-const Nav = () => {
+const Nav = ({ links }) => {
   const [open, setOpen] = useState(false);
   const menubarRef = useRef();
   useEffect(() => {
@@ -67,24 +67,7 @@ const Nav = () => {
               <a className="logo">Zapien</a>
             </Link>
           </div>
-          <ul className="nav-primary">
-            <NavLinks
-              links={[
-                {
-                  name: "Dashboard",
-                  href: "/creators/dashboard",
-                },
-                {
-                  name: "Profile",
-                  href: "/creators/profile",
-                },
-                {
-                  name: "Campaigns",
-                  href: "/creators/campaigns",
-                },
-              ]}
-            />
-          </ul>
+          <ul className="nav-primary">{links && <NavLinks links={links} />}</ul>
           <div className="tools">
             <Menu onClick={() => setOpen(!open)} />
             {open && <MenuBar menubarRef={menubarRef} />}

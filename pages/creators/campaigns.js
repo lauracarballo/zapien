@@ -81,7 +81,22 @@ export default () => {
   return (
     <>
       <Head />
-      <Nav />
+      <Nav
+        links={[
+          {
+            name: "Dashboard",
+            href: "/creators/dashboard",
+          },
+          {
+            name: "Profile",
+            href: "/creators/profile",
+          },
+          {
+            name: "Campaigns",
+            href: "/creators/campaigns",
+          },
+        ]}
+      />
       <div className="container">
         <div className="title">
           <h2 className="title__main">What's new</h2>

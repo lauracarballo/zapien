@@ -6,17 +6,28 @@ export default async (req, res) => {
   const prisma = new PrismaClient({ log: ["query"] });
 
   try {
-    const { name, email, message, companyName, website, type } = req.body;
+    const {
+      title,
+      imageUrl,
+      startDate,
+      endDate,
+      description,
+      brief,
+      brandId,
+      categoryId,
+    } = req.body;
     // console.dir(req, { depth: null });
 
     await prisma.contact.create({
       data: {
-        type,
-        name,
-        email,
-        message,
-        companyName,
-        website,
+        title,
+        imageUrl,
+        startDate,
+        endDate,
+        description,
+        brief,
+        brandId,
+        categoryId,
       },
     });
     res.json({ submitted: true });

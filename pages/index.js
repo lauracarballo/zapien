@@ -12,7 +12,7 @@ export default () => (
   <>
     <Head title="Zapien - Connecting ethical brands with conscious influencers" />
     <Nav />
-    <MainHero
+    <MainHero 
       title={
         <div className="set-height">
           <div className="inline-styling">Promote</div>

@@ -1,6 +1,6 @@
-import { useState, useRef } from "react";
+import { useState, useRef, forwardRef } from "react";
 
-const TextAreaEdit = ({ defaultValue, onConfirm }) => {
+const TextAreaEdit = forwardRef(({ defaultValue, onConfirm }, ref) => {
   const [isEditing, setEditing] = useState(false);
   const [internalValue, setInternalValue] = useState(defaultValue);
   const textareaRef = useRef();
@@ -27,8 +27,9 @@ const TextAreaEdit = ({ defaultValue, onConfirm }) => {
               contentEditable
               className="user__edit-textarea"
               ref={textareaRef}
+              ref={ref}
               dangerouslySetInnerHTML={{ __html: internalValue }}
-            ></div>
+            />
 
             <button
               className="user__edit-button user__edit-button-save"
@@ -54,8 +55,11 @@ const TextAreaEdit = ({ defaultValue, onConfirm }) => {
           .user__edit-container {
             position: relative;
             display: inline-block;
+            width: 100%;
+            height: 100%;
           }
           .user__edit-textarea {
+            height: inherit;
             border-color: rgb(223, 225, 230);
             border-radius: 3px;
             border-style: solid;
@@ -93,6 +97,6 @@ const TextAreaEdit = ({ defaultValue, onConfirm }) => {
       </div>
     </>
   );
-};
+});
 
 export default TextAreaEdit;

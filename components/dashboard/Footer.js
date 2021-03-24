@@ -72,7 +72,7 @@ const Footer = () => {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 10px;
+            padding: 30px 0px;
           }
 
           .copyright {

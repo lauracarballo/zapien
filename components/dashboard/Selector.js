@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import CreatableSelect from "react-select/creatable";
 import makeAnimated from "react-select/animated";
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 
 const animatedComponents = makeAnimated();
 
-const Selector = ({ defaultValue, onConfirm }) => {
+const Selector = forwardRef(({ defaultValue, onConfirm }, ref) => {
   const options = [
     { label: "Apple", value: "Apple" },
     { label: "Banana", value: "Banana" },
@@ -44,6 +44,7 @@ const Selector = ({ defaultValue, onConfirm }) => {
               defaultValue={items}
               onChange={handleChange}
               options={options}
+              ref={ref}
               className="user__edit-input"
               styles={{
                 dropdownIndicator: () => ({ display: "none" }),
@@ -121,6 +122,6 @@ const Selector = ({ defaultValue, onConfirm }) => {
       </div>
     </>
   );
-};
+});
 
 export default Selector;
