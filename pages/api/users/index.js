@@ -10,6 +10,7 @@ export default async function handle(req, res) {
       Brand: {
         include: {
           Campaign: true,
+          Category: true,
         },
       },
     },

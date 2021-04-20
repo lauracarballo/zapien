@@ -6,10 +6,17 @@ import { forwardRef, useState } from "react";
 const animatedComponents = makeAnimated();
 
 export const Input = forwardRef(
-  ({ name, type = "text", error, ...props }, ref) => {
+  ({ name, type = "text", error, className, ...props }, ref) => {
     return (
       <>
-        <input id={name} name={name} type={type} ref={ref} {...props} />
+        <input
+          id={name}
+          name={name}
+          className={className}
+          type={type}
+          ref={ref}
+          {...props}
+        />
 
         {error && <div className="error">{error}</div>}
         <style jsx>{`
@@ -19,7 +26,7 @@ export const Input = forwardRef(
             border: 1px solid rgb(223, 225, 230);
             font-weight: inherit;
             font-size: inherit;
-            padding: 5px 10px;
+            padding: 10px 15px;
             line-height: inherit;
             box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
               rgba(9, 30, 66, 0.31) 0px 0px 1px;
@@ -41,7 +48,7 @@ export const Input = forwardRef(
 );
 
 export const TextArea = forwardRef(
-  ({ large, defaultValue, name, error }, ref) => {
+  ({ large, defaultValue, name, error, placeholder }, ref) => {
     return (
       <>
         <textarea
@@ -50,6 +57,7 @@ export const TextArea = forwardRef(
           defaultValue={defaultValue}
           rows="4"
           ref={ref}
+          placeholder={placeholder}
         />
 
         {error && <div className="error">{error}</div>}
@@ -62,7 +70,7 @@ export const TextArea = forwardRef(
             border: 1px solid rgb(223, 225, 230);
             font-weight: inherit;
             font-size: inherit;
-            padding: 5px 10px;
+            padding: 10px 15px;
             line-height: inherit;
             box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
               rgba(9, 30, 66, 0.31) 0px 0px 1px;
@@ -83,53 +91,49 @@ export const TextArea = forwardRef(
   }
 );
 
-export const Selector = forwardRef(({ defaultValue }, ref) => {
-  const options = [
-    { label: "Apple", value: "Apple" },
-    { label: "Banana", value: "Banana" },
-    { label: "Cherry", value: "Cherry" },
-  ];
+export const Selector = forwardRef(
+  ({ defaultValue, name, options, ...props }, ref) => {
+    // const options = [
+    //   { label: "Apple", value: "Apple" },
+    //   { label: "Banana", value: "Banana" },
+    //   { label: "Cherry", value: "Cherry" },
+    // ];
 
-  const [items, setItems] = useState(defaultValue);
+    return (
+      <>
+        <CreatableSelect
+          id={name}
+          name={name}
+          closeMenuOnSelect={false}
+          components={animatedComponents}
+          isClearable={false}
+          defaultValue={defaultValue}
+          options={options}
+          className="user__edit-input"
+          styles={{
+            dropdownIndicator: () => ({ display: "none" }),
+            indicatorSeparator: () => ({ display: "none" }),
+          }}
+          ref={ref}
+          {...props}
+        />
 
-  function handleChange(inputValue) {
-    console.log(inputValue);
-    setItems(inputValue);
+        <style jsx>{`
+          .user__edit-input {
+            border-radius: 3px;
+            border: 1px solid rgb(223, 225, 230);
+            font-weight: inherit;
+            font-size: inherit;
+            padding: 5px 10px;
+            line-height: inherit;
+            box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+              rgba(9, 30, 66, 0.31) 0px 0px 1px;
+          }
+        `}</style>
+      </>
+    );
   }
-
-  return (
-    <>
-      <CreatableSelect
-        closeMenuOnSelect={false}
-        components={animatedComponents}
-        isMulti
-        isClearable={false}
-        defaultValue={items}
-        onChange={handleChange}
-        options={options}
-        ref={ref}
-        className="user__edit-input"
-        styles={{
-          dropdownIndicator: () => ({ display: "none" }),
-          indicatorSeparator: () => ({ display: "none" }),
-        }}
-      />
-
-      <style jsx>{`
-        .user__edit-input {
-          border-radius: 3px;
-          border: 1px solid rgb(223, 225, 230);
-          font-weight: inherit;
-          font-size: inherit;
-          padding: 5px 10px;
-          line-height: inherit;
-          box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
-            rgba(9, 30, 66, 0.31) 0px 0px 1px;
-        }
-      `}</style>
-    </>
-  );
-});
+);
 
 const Form = ({ onSubmit, children }) => {
   const [loading, setLoading] = useState(false);
