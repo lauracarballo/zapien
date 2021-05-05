@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
           <script async defer
-            src="https://8664kcvh4k.execute-api.us-east-1.amazonaws.com/dev/tracio.js"
+            src="https://0h95g4k825.execute-api.us-east-1.amazonaws.com/dev/tracio.js"
           />
         </body>
       </Html>
